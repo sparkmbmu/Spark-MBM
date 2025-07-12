@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Animate the 'Incubate' word
   const word = document.querySelector(".animated-word");
   if (word) {
     setTimeout(() => {
       word.classList.add("visible");
     }, 500);
   }
-
-  // Mobile menu toggle logic
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   if (menuToggle && mobileMenu) {
@@ -15,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.toggle("active");
     });
   }
-
-  // Optional fade-in effect for social bar
   const bar = document.querySelector(".social-bar");
   if (bar) {
     bar.style.opacity = 0;
@@ -25,8 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       bar.style.opacity = 1;
     }, 500);
   }
-
-  // Typewriter effect
   const words = ["AUTOMATE", "OPTIMIZE", "DEPLOY"];
   let currentWordIndex = 0;
   let charIndex = 0;
@@ -60,7 +53,61 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  typeEffect(); // Start the typewriter animation
+  typeEffect();
 
   console.log("Script loaded");
 });
+const rightArrow = document.querySelector(".right-arrow");
+const leftArrow = document.querySelector(".left-arrow");
+const galleries = document.querySelectorAll(".winners-gallery");
+
+let currentIndex = 0;
+
+function showGallery(index) {
+  galleries.forEach((gallery, i) => {
+    gallery.classList.toggle("gallery-active", i === index);
+  });
+  currentIndex = index;
+}
+function nextGallery() {
+  let nextIndex = (currentIndex + 1) % galleries.length;
+  showGallery(nextIndex);
+}
+function prevGallery() {
+  let prevIndex = (currentIndex - 1 + galleries.length) % galleries.length;
+  showGallery(prevIndex);
+}
+rightArrow.addEventListener("click", nextGallery);
+leftArrow.addEventListener("click", prevGallery);
+setInterval(nextGallery, 8000);
+showGallery(0);
+
+function showGallery(index) {
+  const titles = [
+    "Level – Advanced",
+    "Level – Intermediate",
+    "Level – Beginner",
+  ];
+  const titleElement = document.getElementById("gallery-title");
+  galleries.forEach((gallery, i) => {
+    const isActive = i === index;
+    gallery.classList.toggle("gallery-active", isActive);
+    if (isActive) {
+      const winners = gallery.querySelectorAll(".winner");
+      winners.forEach((winner) => {
+        winner.classList.add("flip");
+        winner.addEventListener(
+          "animationend",
+          () => {
+            winner.classList.remove("flip");
+          },
+          { once: true }
+        );
+      });
+    }
+  });
+  if (titleElement) {
+    titleElement.textContent = titles[index];
+  }
+  currentIndex = index;
+}
