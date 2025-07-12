@@ -1,77 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SPARK - Gallery</title>
   <link rel="stylesheet" href="gallery.css">
 </head>
+
 <body>
 
-<div id="slideshow" class="background-slideshow"></div>
-<div class="overlay"></div>
+  <div id="slideshow" class="background-slideshow"></div>
+  <div class="overlay"></div>
 
-<header class="navbar">
-  <div class="nav-container">
-    <div class="logo">
-       <img src="logo.jpg" alt="Spark Logo" class="logoImg">SPARK
-    </div>
-    <nav class="nav-links desktop">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="Team.html" class="nav-link">Team</a>
-      <a href="gallery.html" class="nav-link active">Gallery</a>
-       <a href="resources.html" class="nav-link">Resources</a>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="logo.jpg" alt="Spark Logo" class="logoImg">SPARK
+      </div>
+      <nav class="nav-links desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="Team.html" class="nav-link">Team</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="resources.html" class="nav-link">Resources</a>
         <a href="our-work.html" class="nav-link">Our Work</a>
         <a href="contact.html" class="nav-link">Contact Us</a>
         <a href="join.html" class="nav-link-join">Join Us</a>
-    </nav>
-    <div class="hamburger" id="menu-toggle">
-      <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-      </svg>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="gallery-section">
-    <h1 class="gallery-title">SPARK GALLERY</h1>
-    <div class="slider" id="slider">
-      <div class="slide-track">
-        <div class="slide"><img src="img1.jpg" alt="Event 1"></div>
-        <div class="slide"><img src="img2.jpg" alt="Event 2"></div>
-        <div class="slide"><img src="img3.jpg" alt="Event 3"></div>
-        <div class="slide"><img src="img21.jpg" alt="Event 4"></div>
-        <div class="slide"><img src="img5.jpg" alt="Event 5"></div>
-        <div class="slide"><img src="img6.jpg" alt="Event 6"></div>
-        <div class="slide"><img src="img7.jpg" alt="Event 7"></div>
-        <div class="slide"><img src="img8.jpg" alt="Event 8"></div>
-        <div class="slide"><img src="img9.jpg" alt="Event 9"></div>
-        <div class="slide"><img src="img10.jpg" alt="Event 10"></div>
+      </nav>
+      <div class="hamburger" id="menu-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon close-icon" id="close-icon" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" style="display: none;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
       </div>
-      <br><br>
-      <div class="slide-track">
-        <div class="slide"><img src="img21.jpg" alt="Event 11"></div>
-        <div class="slide"><img src="img12.jpg" alt="Event 12"></div>
-        <div class="slide"><img src="img13.jpg" alt="Event 13"></div>
-        <div class="slide"><img src="img14.jpg" alt="Event 14"></div>
-        <div class="slide"><img src="img15.jpg" alt="Event 15"></div>
-        <div class="slide"><img src="img16.jpg" alt="Event 16"></div>
-        <div class="slide"><img src="img17.jpg" alt="Event 17"></div>
-        <div class="slide"><img src="img18.jpg" alt="Event 18"></div>
-        <div class="slide"><img src="img19.jpg" alt="Event 19"></div>
-        <div class="slide"><img src="img20.jpg" alt="Event 20"></div>
-      </div>
+      <nav class="nav-links mobile" id="mobile-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="Team.html" class="nav-link">Team</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="our-work.html" class="nav-link">Our Work</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+        <a href="join.html" class="nav-link-join">Join Us</a>
+      </nav>
     </div>
-  </section>
-</main>
+  </header>
 
-<!-- Modal -->
-<div id="modal" class="modal hidden">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modal-img" alt="Enlarged Image">
-</div>
-
-<script src="gallery.js"></script>
+  <main>
+    <section class="gallery-section">
+      <h1 class="gallery-title">SPARK GALLERY</h1>
+      <div class="slider" id="slider">
+        <div class="slide-track">
+          <div class="slide"><img src="img1.jpg" alt="Event 1"></div>
+          <div class="slide"><img src="img2.jpg" alt="Event 2"></div>
+          <div class="slide"><img src="img3.jpg" alt="Event 3"></div>
+          <div class="slide"><img src="img21.jpg" alt="Event 4"></div>
+          <div class="slide"><img src="img5.jpg" alt="Event 5"></div>
+          <div class="slide"><img src="img6.jpg" alt="Event 6"></div>
+          <div class="slide"><img src="img7.jpg" alt="Event 7"></div>
+          <div class="slide"><img src="img8.jpg" alt="Event 8"></div>
+          <div class="slide"><img src="img9.jpg" alt="Event 9"></div>
+          <div class="slide"><img src="img10.jpg" alt="Event 10"></div>
+        </div>
+        <br><br>
+        <div class="slide-track">
+          <div class="slide"><img src="img21.jpg" alt="Event 11"></div>
+          <div class="slide"><img src="img12.jpg" alt="Event 12"></div>
+          <div class="slide"><img src="img13.jpg" alt="Event 13"></div>
+          <div class="slide"><img src="img14.jpg" alt="Event 14"></div>
+          <div class="slide"><img src="img15.jpg" alt="Event 15"></div>
+          <div class="slide"><img src="img16.jpg" alt="Event 16"></div>
+          <div class="slide"><img src="img17.jpg" alt="Event 17"></div>
+          <div class="slide"><img src="img18.jpg" alt="Event 18"></div>
+          <div class="slide"><img src="img19.jpg" alt="Event 19"></div>
+          <div class="slide"><img src="img20.jpg" alt="Event 20"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="gallery.js"></script>
 </body>
+
 </html>
