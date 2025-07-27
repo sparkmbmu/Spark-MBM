@@ -1,5 +1,3 @@
-
-
 const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   const hamburgerIcon = menuToggle.querySelector("svg:not(#close-icon)");
@@ -31,37 +29,3 @@ const menuToggle = document.getElementById("menu-toggle");
       link.classList.add("active");
     }
   });
-
-function toggleLevels(card) {
-  // const description = card.querySelector('.description');
-  const levels = card.querySelector('.levels');
-
-  const isOpen = levels.style.display === 'flex';
-
-  // Close all open boxes first
-  closeAllBoxes();
-
-  // If it was not already open, open this one
-  if (!isOpen) {
-    levels.style.display = 'flex';
-    // description.style.display = 'none';
-  }
-}
-
-// Close all event boxes
-function closeAllBoxes() {
-  const allBoxes = document.querySelectorAll('.event-box');
-  allBoxes.forEach(box => {
-    box.querySelector('.levels').style.display = 'none';
-    // box.querySelector('.description').style.display = 'block';
-  });
-}
-
-// Close if clicked outside
-document.addEventListener('click', function (event) {
-  const isInsideBox = event.target.closest('.event-box');
-  if (!isInsideBox) {
-    closeAllBoxes();
-  }
-});
-
