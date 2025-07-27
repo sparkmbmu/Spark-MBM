@@ -233,22 +233,6 @@ body {
   transform: translateY(-2px);
 }
 
-footer {
-  background: rgba(0, 0, 0, 0.8);
-  text-align: center;
-  padding: 1.5rem 1rem;
-  color: #fff;
-}
-
-footer a {
-  color: cyan;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
 @media (max-width: 600px) {
   .contact-box {
     padding: 1.5rem;
@@ -308,4 +292,24 @@ footer a:hover {
 
 #returnBtn:hover {
   background-color: #ff9900;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0.6rem 0;
+}
+
+.footer-link {
+  color: cyan;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }
