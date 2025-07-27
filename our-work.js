@@ -1,5 +1,3 @@
-
-
 const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   const hamburgerIcon = menuToggle.querySelector("svg:not(#close-icon)");
@@ -31,6 +29,7 @@ const menuToggle = document.getElementById("menu-toggle");
       link.classList.add("active");
     }
   });
+
 
 function toggleLevels(card) {
   // const description = card.querySelector('.description');
