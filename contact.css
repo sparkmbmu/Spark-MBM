@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .navbar {
   background-color: #111;
   padding: 0 1rem;
@@ -56,7 +57,7 @@ body {
 }
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .nav-link-join{
   color: white;
@@ -107,7 +108,35 @@ body {
   width: 24px;
   stroke: white;
 }
+.nav-links.mobile {
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+  padding: 1rem;
+  gap: 1rem;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
   .desktop {
     display: none;
   }
@@ -115,7 +144,19 @@ body {
   .hamburger {
     display: block;
   }
+  .close-icon {
+  display: none;
 }
+}
+.join-btn {
+  background-color: rgb(255, 111, 0);
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 .contact-section {
   flex: 1;
@@ -233,22 +274,6 @@ body {
   transform: translateY(-2px);
 }
 
-footer {
-  background: rgba(0, 0, 0, 0.8);
-  text-align: center;
-  padding: 1.5rem 1rem;
-  color: #fff;
-}
-
-footer a {
-  color: cyan;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
 @media (max-width: 600px) {
   .contact-box {
     padding: 1.5rem;
@@ -308,4 +333,24 @@ footer a:hover {
 
 #returnBtn:hover {
   background-color: #ff9900;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0.6rem 0;
+}
+
+.footer-link {
+  color: cyan;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }

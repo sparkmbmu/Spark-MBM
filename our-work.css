@@ -6,11 +6,288 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, black, #121212);
+  background: linear-gradient(to bottom, #1e1e2f, #121212);
   color: white;
   min-height: 100vh;
 }
 
+/* 
+.navbar {
+  background-color: #111;
+  padding: 0 1rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 1000;
+  font-size: 2.2rem;
+  font-weight: bold;
+  background: linear-gradient(to left, #ff0000, #ff8c00, #ffd700, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logoImg {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+@keyframes fire-flicker {
+  0% {
+    filter: brightness(0.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(2);
+  }
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-link-join{
+  color: white;
+  border-radius: 6px;
+  background: #ff6a00 ;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out ;
+}
+.nav-link-join:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.5);
+  background: #ffd700;
+  color: #111827;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem;
+}
+.nav-link.active,
+.nav-link:hover {
+  color: cyan;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.menu-icon {
+  height: 24px;
+  width: 24px;
+  stroke: white;
+}
+.nav-links.mobile {
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+  padding: 1rem;
+  gap: 1rem;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .close-icon {
+  display: none;
+}
+}
+.join-btn {
+  background-color: rgb(255, 111, 0);
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+} */
+.navbar {
+  background-color: #111;
+  padding: 0 1rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 1000;
+  font-size: 2.2rem;
+  font-weight: bold;
+  background: linear-gradient(to left, #ff0000, #ff8c00, #ffd700, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logoImg {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+@keyframes fire-flicker {
+  0% {
+    filter: brightness(0.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(2);
+  }
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-link-join{
+  color: white;
+  border-radius: 6px;
+  background: #ff6a00 ;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out ;
+}
+.nav-link-join:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.5);
+  background: #ffd700;
+  color: #111827;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem;
+}
+.nav-link.active,
+.nav-link:hover {
+  color: cyan;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.menu-icon {
+  height: 24px;
+  width: 24px;
+  stroke: white;
+}
+.nav-links.mobile {
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+  padding: 1rem;
+  gap: 1rem;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .close-icon {
+  display: none;
+}
+}
 .join-btn {
   background-color: rgb(255, 111, 0);
   color: black;
@@ -28,7 +305,7 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  background:black;
+  /*background:black;*/
   opacity: 0.2;
   background-size: cover;
 }
@@ -42,37 +319,55 @@ body {
   z-index: 0;
 }
 
-#our-work {
+ 
+
+ #our-work {
   padding: 20px 10px;
   font-family: "Segoe UI", sans-serif;
-  background-image: url("resour.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   color: black;
   position: relative;
   z-index: 1;
+  overflow: hidden; 
+  background-image: url("ourworkbg.jpg");
 }
+
+#our-work::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("ourworkbg.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+}
+ 
 
 .section {
   margin-bottom: 50px;
+  
   text-align: center;
 }
 
 .section h2 {
-  font-size: 32px;
-  color: #ffc107;
+  font-size: 38px;
+  font-weight: 600;
+  color: #22D3EE;
 }
 
 .section p {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 300;
   color: white;
   margin-bottom: 20px;
 }
 
 .info-box {
-  background-color: #222222;
-  padding: 15px;
+  background-color: #1a1a1a;
+  padding: 30px;
   border-radius: 8px;
   border: 1px solid #333;
   display: inline-block;
@@ -83,12 +378,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   margin-top: 20px;
 }
 
 .card {
-  background-color: #2a2f40;
+  background-color:#1a1a1a;
   padding: 20px;
   border-radius: 12px;
   width: 280px;
@@ -99,8 +394,12 @@ body {
 
 .card:hover {
   transform: scale(1.05);
-  background: #353b50;
+  background: #151616;
+   box-shadow: 1px 1px 4px rgb(204, 103, 25);
+
 }
+
+
 
 .card h3 {
   font-size: 20px;
@@ -123,7 +422,7 @@ body {
 .card a {
   text-decoration: none;
   display: inline-block;
-  background-color: #ffc107;
+  background-color:rgb(255, 111, 0);
   color: #000;
   padding: 8px 14px;
   border-radius: 6px;
@@ -131,13 +430,71 @@ body {
 }
 
 .card a:hover {
-  background-color: #ffdb4d;
+  background-color:rgb(204, 103, 25);
+ 
 }
 
-/* Footer */
+.events-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.event-box {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.event-box:hover {
+  box-shadow: 1px 1px 4px rgb(204, 103, 25);
+}
+
+.levels {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.level-card {
+  background-color: yellow;
+  color: black;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.level-card a{
+  text-decoration: none;
+}
+
+.description {
+  margin-top: 15px;
+}
+
 footer {
-  width: 100%;
+  background: #111;
   text-align: center;
-  color: white;
-  padding: 10px;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0.6rem 0;
+}
+
+.footer-link {
+  color: cyan;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }

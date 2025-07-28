@@ -381,3 +381,24 @@ hr {
   margin: 1em 0;
   padding: 3rem;
 }
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0.6rem 0;
+}
+
+.footer-link {
+  color: cyan;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
