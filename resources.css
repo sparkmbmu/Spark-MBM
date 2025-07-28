@@ -283,7 +283,7 @@ main {
 
 @media screen and (max-width: 640px) {
   .container {
-    padding: 1.5rem 1rem;
+    padding: 0.5rem 0.5rem;
   }
 
   .section h2, .tip h2, .cta h2 {
