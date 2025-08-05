@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let charIndex = 0;
   let isDeleting = false;
   const speed = 100;
-  const delayBetweenWords = 1200;
+  const delayBetweenWords = 1800;
 
   const textElement = document.querySelector(".typewriter-text");
 
