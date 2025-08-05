@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spark-Team</title>
-  <link rel="stylesheet" href="/Pages_css/Team.css" /> 
+  <link rel="stylesheet" href="/Pages_css/Team.css" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -20,38 +20,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-
-  <style>
-  @media (max-width: 950px) {
-    .sub-text {
-      position: static;
-      text-align: center;
-      max-width: 90%;
-      margin: 1rem auto 3rem auto;
-    }
-
-    #right-shift-img {
-      position: static;
-      margin: 1rem auto;
-      display: block;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hero-text h1 {
-      font-size: 2.25rem;
-      top: 0;
-    }
-
-    .team-grid {
-      grid-template-columns: 1fr !important;
-    }
-
-    .member-card {
-      margin-top: 1rem !important;
-    }
-  }
-</style>
 
 
 </head>
@@ -69,7 +37,7 @@
         <a href="resources.html" class="nav-link">Resources</a>
         <a href="/Pages/our-work.html" class="nav-link">Our Work</a>
         <a href="/Pages/contact.html" class="nav-link">Contact Us</a>
-        <button href="/Pages/join.html" class="nav-link-join">Join Us</button>
+        <a href="/Pages/join.html" class="nav-link-join">Join Us</a>
       </nav>
 
       <div class="hamburger" id="menu-toggle">
@@ -92,14 +60,13 @@
       </nav>
     </div>
   </header>
-
-
-  <h1 class="meet-us">
-    MEET THE <span class="edit-spark">SPARK</span> TEAM
-  </h1>
-
-  <section class="spark-hero">
+  <div class="spark-hero">
+    <div class="overlay"></div>
     <div class="hero-text">
+      <h1 class="meet-us">
+        MEET THE <span class="edit-spark">SPARK</span> TEAM
+      </h1>
+
       <p class="sub-text">
         To the wisdom that fueled our flame — we’re grateful, sir.
       </p>
@@ -109,6 +76,10 @@
           <img src="/Components/Team/abhisheksirig.jpeg" alt="Abhishek Sir" />
           <div class="member-overlay">
             <div class="icon-bar">
+              <!-- <a href="https://wa.me/919530188107" target="_blank">
+                  <i data-feather="message-circle"></i
+                ></a> -->
+
               <a href="https://in.linkedin.com/in/abhisek-gour" target="_blank"><i data-feather="linkedin"></i></a>
               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mayank1gdsc@gmail.com" target="_blank"><i
                   data-feather="mail"></i></a>
@@ -122,17 +93,14 @@
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
   <div class="spark-team">
-    <!-- THE FOUNDING TEAM -->
-    <section class="founding">
+    <div>
       <div class="section-title">
         <h2>THE FOUNDING TEAM</h2>
       </div>
       <div class="team-grid max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
         id="info-box">
-        <!-- Member 1 -->
         <div class="member-card">
           <div class="relative">
             <img src="/Components/Team/Founding_Team/mayankagg.jpg" alt="Mayank Aggarwal" />
@@ -142,6 +110,7 @@
                   <i data-feather="message-circle"></i></a>
                 <a href="https://in.linkedin.com/in/er-mayank-aggarwal" target="_blank"><i
                     data-feather="linkedin"></i></a>
+
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mayank1gdsc@gmail.com" target="_blank"
                   rel="noopener noreferrer"><i data-feather="mail"></i></a>
               </div>
@@ -153,12 +122,12 @@
             <p class="bio">Computer Science and Eng.<br />2027 Batch</p>
           </div>
         </div>
-        <!-- Member 2 -->
         <div class="member-card">
           <div class="relative">
             <img src="/Components/Team/Founding_Team/pradyumanch.jpg" alt="Pradyuman Choudhary" />
             <div class="member-overlay">
               <div class="icon-bar">
+
                 <a href="https://www.linkedin.com/in/pradyumnchaudhary/" target="_blank"><i
                     data-feather="linkedin"></i></a>
                 <a href="mailto:someone@example.com" target="_blank"><i data-feather="mail"></i></a>
@@ -171,12 +140,12 @@
             <p class="bio">Computer Science and Eng.<br />2027 Batch</p>
           </div>
         </div>
-        <!-- Member 3 -->
         <div class="member-card">
           <div class="relative">
             <img src="/Components/Team/Founding_Team/mohitgaur.jpg" alt="Mohit Gaur" />
             <div class="member-overlay">
               <div class="icon-bar">
+
                 <a href="https://www.linkedin.com/in/swemohitgaur/" target="_blank"><i data-feather="linkedin"></i></a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mayank1gdsc@gmail.com" target="_blank"><i
                     data-feather="mail"></i></a>
@@ -189,58 +158,20 @@
             <p class="bio">Information Technology<br />2027 Batch</p>
           </div>
         </div>
-        <!-- Member 4 -->
-        <div class="member-card">
-          <div class="relative">
-            <img src="/Components/Team/Founding_Team/priyadarsheeni.jpg" alt="Mohit Gaur" />
-            <div class="member-overlay">
-              <div class="icon-bar">
-                <a href="https://www.linkedin.com/in/priyadarsheeni-c-68393a2a1/" target="_blank"><i data-feather="linkedin"></i></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=priyadarsheenichoudhary@gmail.com" target="_blank"><i
-                    data-feather="mail"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="member-info">
-            <h3>Priyadarsheeni Choudhary</h3>
-            <p class="role">Founding Contributor</p>
-            <p class="bio">Information Technology<br />2027 Batch</p>
-          </div>
-        </div>
-        <!-- Member 5 -->
-        <div class="member-card">
-          <div class="relative">
-            <img src="/Components/Team/Founding_Team/sneha.jpeg" alt="Mohit Gaur" />
-            <div class="member-overlay">
-              <div class="icon-bar">
-                <a href="https://www.linkedin.com/in/sneha-rathi-566402291/" target="_blank"><i data-feather="linkedin"></i></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Rathisneha004@gmail.com" target="_blank"><i
-                    data-feather="mail"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="member-info">
-            <h3>Sneha Rathi</h3>
-            <p class="role">Founding Contributor</p>
-            <p class="bio">Electronics and Computer Eng.<br />2027 Batch</p>
-          </div>
-        </div>
       </div>
-    </section>
 
-    <!-- Team 2025 -->
-    <section class="2025team">
       <div class="section-title">
         <h2>TEAM 2025</h2>
       </div>
+
       <div class="team-grid max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
         id="info-box">
-        <!-- Member 1 -->
         <div class="member-card">
           <div class="relative">
             <img src="/Components/Team/Team_2025/garvit.png" alt="Garvit Jain" />
             <div class="member-overlay">
               <div class="icon-bar">
+
                 <a href="https://www.linkedin.com/in/garvit-jain-7b2a9a311/" target="_blank"><i
                     data-feather="linkedin"></i></a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mayank1gdsc@gmail.com" target="_blank"><i
@@ -251,15 +182,15 @@
           <div class="member-info">
             <h3>Garvit Jain</h3>
             <p class="role">Student Coordinator</p>
-            <p class="bio">Electronics and Communication Eng.<br>2028 Batch</p>
+            <p class="bio">Electronics And Communication Eng.<br>2028 Batch</p>
           </div>
         </div>
-        <!-- Member 2 -->
         <div class="member-card">
           <div class="relative">
             <img src="/Components/Team/Team_2025/himanshi.png" alt="Himanshi Mathur" />
             <div class="member-overlay">
               <div class="icon-bar">
+
                 <a href="https://www.linkedin.com/in/himanshi-mathur-303b23341/" target="_blank"><i
                     data-feather="linkedin"></i></a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=himanshimathur781@gmail.com" target="_blank"><i
@@ -273,12 +204,12 @@
             <p class="bio">Electrical and Electronics Eng.<br>2028 Batch</p>
           </div>
         </div>
-        <!-- Member 3 -->
         <div class="member-card">
           <div class="relative">
             <img src="/Components/Team/Team_2025/raghav.jpg" alt="Raghav Khandelwal" />
             <div class="member-overlay">
               <div class="icon-bar">
+
                 <a href="https://www.linkedin.com/in/raghav-khandelwal-17463b325/" target="_blank"><i
                     data-feather="linkedin"></i></a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mayank1gdsc@gmail.com" target="_blank"><i
@@ -292,12 +223,12 @@
             <p class="bio">Computer Science and Eng.<br />2028 Batch</p>
           </div>
         </div>
-        <!-- Member 4 -->
         <div class="member-card">
           <div class="relative">
             <img src="/Components/Team/Team_2025/renu.jpg" alt="Renu Gehlot" />
             <div class="member-overlay">
               <div class="icon-bar">
+
                 <a href="https://www.linkedin.com/in/renu-gehlot-42655532a/" target="_blank"><i
                     data-feather="linkedin"></i></a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rgehlot.1017@gmail.com" target="_blank"><i
@@ -311,12 +242,12 @@
             <p class="bio">Electrical and Electronics Eng.<br>2028 Batch</p>
           </div>
         </div>
-        <!-- Member 5 -->
         <div class="member-card">
           <div class="relative">
             <img src="/Components/Team/Team_2025/vinti.jpg" alt="Vinti Jingar" />
             <div class="member-overlay">
               <div class="icon-bar">
+
                 <a href="https://www.linkedin.com/in/vinti-jingar-121ab8330/" target="_blank"><i
                     data-feather="linkedin"></i></a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vintijingar@gmail.com" target="_blank"><i
@@ -331,9 +262,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="development">
       <div class="section-title">
         <h2>DEVELOPMENT TEAM</h2>
       </div>
@@ -368,6 +296,8 @@
             <img src="/Components/Team/Development_team/sumitra.jpg" alt="Sumitra Choudhary" />
             <div class="member-overlay">
               <div class="icon-bar">
+
+
                 <a href="https://www.linkedin.com/in/sumitra-patel-61a59432b/" target="_blank"><i
                     data-feather="linkedin"></i></a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mayank1gdsc@gmail.com" target="_blank"><i
@@ -385,33 +315,12 @@
         </div>
 
         <!-- Member 3 -->
-         <div class="member-card">
-          <div class="relative">
-            <img src="/Components/Team/Development_team/tanvish.jpg" alt="Tanvi Shekhawat" />
-            <div class="member-overlay">
-              <div class="icon-bar">
-                <a href="https://www.linkedin.com/in/tanvi-shekhawat/" target="_blank"><i
-                    data-feather="linkedin"></i></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shekhawattanvi2802@gmail.com" target="_blank"><i
-                    data-feather="mail"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="member-info">
-            <h3>Tanvi Shekhawat</h3>
-            <p class="role">Developer</p>
-            <p class="bio">
-              Computer Science and Eng.<br />2028 Batch
-            </p>
-          </div>
-        </div>
-
-        <!-- Member 4 -->
         <div class="member-card">
           <div class="relative">
             <img src="/Components/Team/Development_team/ome.jpg" alt="Ome Tiwari" />
             <div class="member-overlay">
               <div class="icon-bar">
+
                 <a href="https://www.linkedin.com/in/ome-tiwari-9080a9314/" target="_blank"><i
                     data-feather="linkedin"></i></a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=omt81144@gmail.com" target="_blank"><i
@@ -426,20 +335,32 @@
               Computer Science and Eng.<br />2028 Batch
             </p>
           </div>
-        </div> 
-      </div>
-    </section>
+        </div>
 
-    <footer>
-      <p>© 2025 SPARK. All rights reserved.</p>
-      <div>
-        <a href="#" class="footer-link">Privacy Policy</a> |
-        <a href="#" class="footer-link">Terms of Service</a>
+        <!-- Member 4 -->
+        <div class="member-card">
+          <div class="relative">
+            <img src="/Components/Team/Development_team/tanvish.jpg" alt="Tanvi Shekhawat" />
+            <div class="member-overlay">
+              <div class="icon-bar">
+                <a href="https://www.linkedin.com/in/tanvi-shekhawat-8a6a6432b/" target="_blank"><i
+                    data-feather="linkedin"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shekhawattanvi2802@gmail.com" target="_blank"><i
+                    data-feather="mail"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Tanvi Shekhawat</h3>
+            <p class="role">Developer</p>
+            <p class="bio">
+              Computer Science and Eng.<br />2028 Batch
+            </p>
+          </div>
+        </div>
       </div>
-    </footer>
-
-    <script src="/Pages_js/Team.js"></script>
-    <script>feather.replace();</script>
+      <script src="/Pages_js/Team.js"></script>
+      <script>feather.replace();</script>
 </body>
 
 </html>
