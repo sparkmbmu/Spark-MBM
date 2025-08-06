@@ -33,12 +33,21 @@ const menuToggle = document.getElementById("menu-toggle");
   });
 
   // Apply flip effect on all cards
-const allCards = document.querySelectorAll('.flip-card');
+const flipCards = document.querySelectorAll('.flip-card');
 
-allCards.forEach(card => {
+flipCards.forEach(card => {
   card.addEventListener('click', () => {
+    // Remove 'flipped' class from all other cards
+    flipCards.forEach(otherCard => {
+      if (otherCard !== card) {
+        otherCard.classList.remove('flipped');
+      }
+    });
+
+    // Toggle 'flipped' class on the clicked card
     card.classList.toggle('flipped');
   });
 });
+
 
 
