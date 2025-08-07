@@ -241,8 +241,8 @@ body {
 
 /* Flip Card Core */
 .flip-card {
-  width: 370px;
-  height: 290px;
+  width: 350px;
+  height: 260px;
   perspective: 1000px;
   cursor: pointer;
 }
