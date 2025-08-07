@@ -1,168 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SPARK</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/Pages_css/our-work.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARK Resources</title>
+    
+    <!-- Google Fonts for a professional feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Pages_css/our-work.css">
+    <!-- Feather Icons for clean icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
+<body>
 
-<body class="relative text-white">
+    <canvas id="canvas-background"></canvas>
 
-
-    <div id="slideshow" class="background-slideshow"></div>
-    <div class="overlay"></div>
-
-    <section id="our-work">
-        <div class="section">
-            <h2>Upcoming Events</h2>
-            <p>Join us to enhance your coding skills and connect with peers.</p>
-            <div class="info-box">No upcoming events at the moment. Please check back later.</div>
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../Components/logo.png" alt="Spark Logo" class="logoImg"><span class="shiny-text">SPARK</span>
+            </div>
+            <nav class="nav-links desktop">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="/Pages/Team.html" class="nav-link">Team</a>
+                <a href="/Pages/gallery.html" class="nav-link">Gallery</a>
+                <a href="resources.html" class="nav-link active">Resources</a>
+                <a href="/Pages/our-work.html" class="nav-link">Our Work</a>
+                <a href="/Pages/contact.html" class="nav-link">Contact Us</a>
+                <a href="/Pages/join.html" class="nav-link-join">Join Us</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="section">
-            <h2>Past Events</h2>
-            <p>See the challenges we've hosted and the skills we've covered.</p>
-            <div class="cards">
-                <div class="card">
-                    <h3>Contest 2.0 Beginners</h3>
-                    <p class="date">April 8, 2025</p>
-                    <p>Unleash Your Code, Challenge the Best.</p>
-                    <a href="https://www.hackerrank.com/sparkbeginner" class="visit-btn">Visit</a>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Explore the <span class="highlight">SPARK</span> Archive</h1>
+                <p>A curated collection of our past events, learning materials, and projects. Dive in to learn, get inspired, and see what we've been building.</p>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section class="section">
+            <h2 class="section-title">Upcoming Events</h2>
+            <p class="section-subtitle">Mark your calendars! Here's what's next on the SPARK agenda. Get ready to learn, compete, and innovate.</p>
+            <div class="card-grid">
+                <div class="upcoming-card">
+                    <div class="date">August 25, 2025</div>
+                    <h3>SPARK Induction 2025</h3>
+                    <div class="countdown" data-date="2025-08-25"></div>
+                    <div class="countdown-label">Days Remaining</div>
                 </div>
-                <div class="card">
-                    <h3>Contest 2.0 Intermediate</h3>
-                    <p class="date">April 8, 2025</p>
-                    <p>Crack the logic, Conquer the leaderboard.</p>
-                    <a href="https://www.hackerrank.com/sparkintermediate" class="visit-btn">Visit</a>
+                <div class="upcoming-card">
+                    <div class="date">September 14, 2025</div>
+                    <h3>Contest 3.0</h3>
+                    <div class="countdown" data-date="2025-09-14"></div>
+                    <div class="countdown-label">Days Remaining</div>
                 </div>
-                <div class="card">
-                    <h3>Contest 2.0 Advanced</h3>
-                    <p class="date">April 8, 2025</p>
-                    <p>Where Coders Rise to the challenge.</p>
-                    <a href="https://www.hackerrank.com/sparkadvanced" class="visit-btn">Visit</a>
+                <div class="upcoming-card">
+                    <div class="date">September 20, 2025</div>
+                    <h3>Internal Hackathon</h3>
+                    <div class="countdown" data-date="2025-09-20"></div>
+                    <div class="countdown-label">Days Remaining</div>
                 </div>
-                <div class="card">
-                    <h3>contest 1.0 Beginners</h3>
-                    <p class="date">March 15, 2025</p>
-                    <p>Innovate, Collaborate, Create.</p>
-                    <a href="https://www.hackerrank.com/contests/spark-beginner/challenges" class="visit-btn">Visit</a>
-                </div>
-                <div class="card">
-                    <h3>contest 1.0 Intermediate</h3>
-                    <p class="date">February 20, 2025</p>
-                    <p>Code, Compete, Celebrate.</p>
-                    <a href="https://www.hackerrank.com/contests/spark-intermediate/challenges"
-                        class="visit-btn">Visit</a>
-                </div>
-                <div class="card">
-                    <h3>contest 1.0 Advanced</h3>
-                    <p class="date">January 10, 2025</p>
-                    <p>Build your first website in a day!</p>
-                    <a href=https://www.hackerrank.com/contests/spark-advanced/challenges"" class="visit-btn">Visit</a>
-                </div>
-                <div class="card">
-                    <h3>codding competition 2025</h3>
-                    <p class="date">April 20, 2025</p>
-                    <p>Get ready to code!</p>
-                    <a href="https://forms.gle/c8LmgWEeGZV6PMZm8" class="visit-btn">Visit</a>
+                <div class="upcoming-card">
+                    <div class="date">October 5, 2025</div>
+                    <h3>Project Stage 2</h3>
+                    <div class="countdown" data-date="2025-10-05"></div>
+                    <div class="countdown-label">Days Remaining</div>
                 </div>
             </div>
-        </div>
-        <div class="section">
-            <h2>Sessions & Classes</h2>
-            <p>Workshops, coding classes, guest lectures – all in one place!</p>
-            <div class="cards">
-                <div class="card">
-                    <h3>guideness session</h3>
-                    <p class="date">March 5, 2025</p>
-                    <p>Learn the foundations of tech.</p>
+        </section>
 
-                </div>
-                <div class="card">
-                    <h3>vs code session</h3>
-                    <p class="date">March 12, 2025</p>
-                    <p>Start your coding journey with c++</p>
-                </div>
-                <div class="card">
-                    <h3>c Basics Class</h3>
-                    <p class="date">March 12, 2025</p>
-                    <p>Start your coding journey with c</p>
-                    
-                </div>
-
+        <!-- Past Events Section -->
+        <section class="section">
+            <h2 class="section-title">Past Events Archive</h2>
+            <p class="section-subtitle">Browse our history of competitive contests, knowledge-sharing sessions, and collaborative projects.</p>
+            <div class="tabs">
+                <button class="tab-link active" onclick="openTab(event, 'Contests')">Contests</button>
+                <button class="tab-link" onclick="openTab(event, 'Results')">Results</button>
+                <button class="tab-link" onclick="openTab(event, 'Sessions')">Sessions</button>
+                <button class="tab-link" onclick="openTab(event, 'Projects')">Projects</button>
             </div>
-        </div>
 
-        <div class="section">
-            <h2>Projects</h2>
-            <p>Real-world team projects designed and built by SPARK members.</p>
-            <div class="cards">
-                <div class="card">
-                    <h3>Restaurant Menu System</h3>
-                    <p class="date">Ongoing</p>
-                    <p>Smart menu for easy food ordering on campus.</p>
-                    <a href="restaurantmenu.pdf">See Details</a>
+            <!-- Contests Tab -->
+            <div id="Contests" class="tab-content active">
+                <div style="margin-bottom: 6rem;">
+                    <h2 class="section-title">Contest 2.0</h2>
+                    <p class="section-subtitle">Our second major competitive programming event, featuring challenges for all skill levels.</p>
+                    <div class="card-grid">
+                        <div class="event-card">
+                            <div class="icon"><i data-feather="shield"></i></div>
+                            <h3>Beginner Track</h3>
+                            <span class="level-tag beginner">Beginner</span>
+                            <p>Focused on fundamental algorithms and data structures. A perfect starting point for aspiring competitive programmers.</p>
+                            <a href="#" class="btn">View Problems</a>
+                        </div>
+                        <div class="event-card">
+                            <div class="icon"><i data-feather="zap"></i></div>
+                            <h3>Intermediate Track</h3>
+                            <span class="level-tag intermediate">Intermediate</span>
+                            <p>Challenging problems requiring a solid grasp of algorithms, designed to push logical thinking and efficiency.</p>
+                            <a href="#" class="btn">View Problems</a>
+                        </div>
+                        <div class="event-card">
+                            <div class="icon"><i data-feather="award"></i></div>
+                            <h3>Hard Track</h3>
+                            <span class="level-tag hard">Hard</span>
+                            <p>Complex, multi-layered problems for seasoned coders, testing deep algorithmic knowledge and creativity.</p>
+                            <a href="#" class="btn">View Problems</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Travel Booking System</h3>
-                    <p class="date">ongoing</p>
-                    <p>Book campus trips easily and quickly.</p>
-                    <a href="travelbooking.pdf">See Details</a>
+                
+                <div>
+                    <h2 class="section-title">Contest 1.0</h2>
+                    <p class="section-subtitle">The inaugural contest that started it all. A look back at our first set of challenges.</p>
+                    <div class="card-grid">
+                        <div class="event-card">
+                            <div class="icon"><i data-feather="shield"></i></div>
+                            <h3>Beginner Track</h3>
+                            <span class="level-tag beginner">Beginner</span>
+                            <p>Our first set of introductory problems designed to welcome newcomers to the world of competitive coding.</p>
+                            <a href="#" class="btn">View Problems</a>
+                        </div>
+                        <div class="event-card">
+                            <div class="icon"><i data-feather="zap"></i></div>
+                            <h3>Intermediate Track</h3>
+                            <span class="level-tag intermediate">Intermediate</span>
+                            <p>The original intermediate challenge, focusing on core DSA concepts like sorting, searching, and graphs.</p>
+                            <a href="#" class="btn">View Problems</a>
+                        </div>
+                        <div class="event-card">
+                            <div class="icon"><i data-feather="award"></i></div>
+                            <h3>Hard Track</h3>
+                            <span class="level-tag hard">Hard</span>
+                            <p>The first-ever hard track, featuring tough problems on dynamic programming and advanced data structures.</p>
+                            <a href="#" class="btn">View Problems</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Ragistration Portal</h3>
-                    <p class="date">Ongoing</p>
-                    <p>Register for events with one click.</p>
-                    <a href="coursereg.pdf">See Details</a>
-                </div>
-                <div class="card">
-                    <h3>Billing System</h3>
-                    <p class="date">Ongoing</p>
-                    <p>Pay fees and get bills online.</p>
-                    <a href="billsystem.pdf">See Details</a>
-                </div>
-                <div class="card">
-                    <h3>Clinic Management</h3>
-                    <p class="date">Ongoing</p>
-                    <p>Manage clinic visits and student records.</p>
-                    <a href="clinicmanagement.pdf">See Details</a>
-                </div>
-                <div class="card">
-                    <h3>project 6</h3>
-                    <p class="date">upcomming</p>
-                    <p>Join us for a weekend of coding and innovation!</p>
-                    <a href="#">See Details</a>
-                </div>
-                <div class="card">
-                    <h3>project 7</h3>
-                    <p class="date">upcomming</p>
-                    <p>Join us for a weekend of coding and innovation!</p>
-                    <a href="#">See Details</a>
-                </div>
-
-
             </div>
-        </div>
-    </section>
-    <!-- Footer -->
+            
+            <!-- Results Tab -->
+            <div id="Results" class="tab-content">
+                <div style="margin-bottom: 6rem;">
+                    <h2 class="section-title">Contest 2.0 Results</h2>
+                    <p class="section-subtitle">Celebrating the top performers of our latest competition.</p>
+                    <div class="card-grid">
+                        <div class="results-category">
+                            <h3>Beginner Winners</h3>
+                            <ul class="winner-list">
+                                <li class="winner-item gold">
+                                    <img src="https://i.pravatar.cc/150?img=1" alt="Winner" class="winner-img">
+                                    <span class="rank">1st</span> 
+                                    <div class="winner-info">
+                                        <div class="name">Priya Sharma</div>
+                                        <div class="branch">CSE, 1st Year</div>
+                                    </div>
+                                </li>
+                                <li class="winner-item silver">
+                                    <img src="https://i.pravatar.cc/150?img=2" alt="Winner" class="winner-img">
+                                    <span class="rank">2nd</span> 
+                                    <div class="winner-info">
+                                        <div class="name">Rahul Verma</div>
+                                        <div class="branch">IT, 1st Year</div>
+                                    </div>
+                                </li>
+                                <li class="winner-item bronze">
+                                    <img src="https://i.pravatar.cc/150?img=3" alt="Winner" class="winner-img">
+                                    <span class="rank">3rd</span> 
+                                    <div class="winner-info">
+                                        <div class="name">Anjali Singh</div>
+                                        <div class="branch">ECE, 1st Year</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="results-category">
+                            <h3>Intermediate Winners</h3>
+                             <ul class="winner-list">
+                                <li class="winner-item gold">
+                                    <img src="https://i.pravatar.cc/150?img=4" alt="Winner" class="winner-img">
+                                    <span class="rank">1st</span> 
+                                    <div class="winner-info">
+                                        <div class="name">Amit Kumar</div>
+                                        <div class="branch">CSE, 2nd Year</div>
+                                    </div>
+                                </li>
+                                <li class="winner-item silver">
+                                    <img src="https://i.pravatar.cc/150?img=5" alt="Winner" class="winner-img">
+                                    <span class="rank">2nd</span> 
+                                    <div class="winner-info">
+                                        <div class="name">Sneha Gupta</div>
+                                        <div class="branch">IT, 2nd Year</div>
+                                    </div>
+                                </li>
+                                <li class="winner-item bronze">
+                                    <img src="https://i.pravatar.cc/150?img=6" alt="Winner" class="winner-img">
+                                    <span class="rank">3rd</span> 
+                                    <div class="winner-info">
+                                        <div class="name">Rohan Mehra</div>
+                                        <div class="branch">CSE, 2nd Year</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="results-category">
+                            <h3>Hard Winners</h3>
+                             <ul class="winner-list">
+                                <li class="winner-item gold">
+                                    <img src="https://i.pravatar.cc/150?img=7" alt="Winner" class="winner-img">
+                                    <span class="rank">1st</span> 
+                                    <div class="winner-info">
+                                        <div class="name">Vikas Patel</div>
+                                        <div class="branch">CSE, 3rd Year</div>
+                                    </div>
+                                </li>
+                                <li class="winner-item silver">
+                                    <img src="https://i.pravatar.cc/150?img=8" alt="Winner" class="winner-img">
+                                    <span class="rank">2nd</span> 
+                                    <div class="winner-info">
+                                        <div class="name">Deepika Jain</div>
+                                        <div class="branch">CSE, 4th Year</div>
+                                    </div>
+                                </li>
+                                <li class="winner-item bronze">
+                                    <img src="https://i.pravatar.cc/150?img=9" alt="Winner" class="winner-img">
+                                    <span class="rank">3rd</span> 
+                                    <div class="winner-info">
+                                        <div class="name">Arjun Reddy</div>
+                                        <div class="branch">IT, 3rd Year</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sessions Tab -->
+            <div id="Sessions" class="tab-content">
+                 <h2 class="section-title">Knowledge Sessions</h2>
+                <p class="section-subtitle">Expert-led sessions on cutting-edge technologies and foundational concepts.</p>
+                <div class="card-grid">
+                    <div class="event-card">
+                        <div class="icon"><i data-feather="git-branch"></i></div>
+                        <h3>Git & GitHub Workshop</h3>
+                        <p>A hands-on session covering version control essentials, from basic commands to collaborative workflows on GitHub.</p>
+                        <a href="#" class="btn">Get Slides</a>
+                    </div>
+                    <div class="event-card">
+                        <div class="icon"><i data-feather="cpu"></i></div>
+                        <h3>Intro to Machine Learning</h3>
+                        <p>Explored the fundamentals of ML, key algorithms, and how to build your first predictive model with Python.</p>
+                        <a href="#" class="btn">Watch Recording</a>
+                    </div>
+                     <div class="event-card">
+                        <div class="icon"><i data-feather="layout"></i></div>
+                        <h3>Frontend with React</h3>
+                        <p>An introduction to building dynamic user interfaces with the React library, covering components, state, and props.</p>
+                        <a href="#" class="btn">View Code</a>
+                    </div>
+                    <div class="event-card">
+                        <div class="icon"><i data-feather="database"></i></div>
+                        <h3>Database Design 101</h3>
+                        <p>Learned the principles of relational database design, normalization, and writing efficient SQL queries.</p>
+                        <a href="#" class="btn">Get Notes</a>
+                    </div>
+                    <div class="event-card">
+                        <div class="icon"><i data-feather="cloud"></i></div>
+                        <h3>Deploying Your First App</h3>
+                        <p>A practical guide to deploying web applications using modern cloud services like Vercel and Netlify.</p>
+                        <a href="#" class="btn">Follow Guide</a>
+                    </div>
+                     <div class="event-card">
+                        <div class="icon"><i data-feather="shield"></i></div>
+                        <h3>Cybersecurity Fundamentals</h3>
+                        <p>An overview of common web vulnerabilities (XSS, SQLi) and best practices for writing secure code.</p>
+                        <a href="#" class="btn">View Resources</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Tab -->
+            <div id="Projects" class="tab-content">
+                <h2 class="section-title">Club Projects</h2>
+                <p class="section-subtitle">Collaborative projects built by our members, showcasing practical application of skills.</p>
+                <div class="card-grid">
+                    <div class="event-card">
+                        <div class="icon"><i data-feather="book-open"></i></div>
+                        <h3>College Library API</h3>
+                        <p>A RESTful API developed to manage and serve data for the college library system, built with Node.js and Express.</p>
+                        <a href="#" class="btn">Explore on GitHub</a>
+                    </div>
+                    <div class="event-card">
+                        <div class="icon"><i data-feather="bar-chart-2"></i></div>
+                        <h3>Placement Stats Visualizer</h3>
+                        <p>A web application that fetches and displays past placement statistics in interactive charts and graphs using D3.js.</p>
+                        <a href="#" class="btn">View Demo</a>
+                    </div>
+                    <div class="event-card">
+                        <div class="icon"><i data-feather="message-square"></i></div>
+                        <h3>Real-time Chat App</h3>
+                        <p>A full-stack chat application using WebSockets for instant messaging, built with React and a Python backend.</p>
+                        <a href="#" class="btn">Try It Live</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glimpses of SPARK Section -->
+        <section class="section">
+            <h2 class="section-title">Glimpses of SPARK</h2>
+            <p class="section-subtitle">A look into the moments that define our community—workshops, competitions, and collaborative sessions.</p>
+            <div class="slider-wrapper">
+                <div class="slider-container">
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Workshop session"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop" alt="Team working on a project"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop" alt="Coding on a laptop"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop" alt="Presentation to a group"></div>
+                    <div class="slide"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2132&auto=format&fit=crop" alt="Members collaborating"></div>
+                </div>
+            </div>
+            <div class="gallery-link-container">
+                 <a href="#" class="btn">View Full Gallery</a>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="cta-content">
+                <h2>Ready to Ignite Your Potential?</h2>
+                <p>Join a community of innovators, builders, and problem-solvers. Become a part of SPARK today.</p>
+                <a href="#" class="btn cta-btn">Join The Club</a>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p class="text-sm">© 2025 SPARK. All rights reserved.</p>
-        <div class="mt-2">
-            <a href="#" class="text-cyan-400 hover:underline">Privacy Policy</a> |
-            <a href="#" class="text-cyan-400 hover:underline">Terms of Service</a>
+        <p>© 2025 SPARK. All rights reserved.</p>
+        <div>
+            <a href="#" class="footer-link">Privacy Policy</a> |
+            <a href="#" class="footer-link">Terms of Service</a>
         </div>
     </footer>
-    <script>
-        const toggle = document.getElementById("menu-toggle");
-        const menu = document.getElementById("mobile-menu");
-        toggle.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-    </script>
+    <script src="../Pages_js/our-work.js"></script>
 
 </body>
-
 </html>
