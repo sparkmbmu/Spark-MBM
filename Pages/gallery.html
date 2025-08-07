@@ -2,92 +2,187 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SPARK - Gallery</title>
-  <link rel="stylesheet" href="/Pages_css/gallery.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="logo.jpg" />
+    <title>SPARK</title>
+    <link rel="stylesheet" href="/Pages_css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
 
-  <div id="slideshow" class="background-slideshow"></div>
-  <div class="overlay"></div>
+    <div id="slideshow" class="background-slideshow"></div>
+    <div class="overlay"></div>
 
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="logo">
-        <img src="/Components/logo.jpg" alt="Spark Logo" class="logoImg">SPARK
-      </div>
-      <nav class="nav-links desktop">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="/Pages/Team.html" class="nav-link">Team</a>
-        <a href="/Pages/gallery.html" class="nav-link active">Gallery</a>
-        <a href="/Pages/resources.html" class="nav-link">Resources</a>
-        <a href="/Pages/our-work.html" class="nav-link">Our Work</a>
-        <a href="/Pages/contact.html" class="nav-link">Contact Us</a>
-        <a href="/Pages/join.html" class="nav-link-join">Join Us</a>
-      </nav>
-      <div class="hamburger" id="menu-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon close-icon" id="close-icon" viewBox="0 0 24 24"
-          fill="none" stroke="currentColor" style="display: none;">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </div>
-      <nav class="nav-links mobile" id="mobile-menu">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="/Pages/Team.html" class="nav-link">Team</a>
-        <a href="/Pages/gallery.html" class="nav-link active">Gallery</a>
-        <a href="/Pages/resources.html" class="nav-link">Resources</a>
-        <a href="/Pages/our-work.html" class="nav-link">Our Work</a>
-        <a href="/Pages/contact.html" class="nav-link">Contact Us</a>
-        <a href="/Pages/join.html" class="nav-link-join">Join Us</a>
-      </nav>
-    </div>
-  </header>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Spark Logo" class="logoImg">SPARK
+            </div>
+            <nav class="nav-links desktop">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="Team.html" class="nav-link">Team</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="our-work.html" class="nav-link">Our Work</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="join.html" class="nav-link-join">Join Us</a>
+            </nav>
+            <div class="hamburger" id="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon close-icon" id="close-icon" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" style="display: none;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <nav class="nav-links mobile" id="mobile-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="Team.html" class="nav-link">Team</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="our-work.html" class="nav-link">Our Work</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="join.html" class="nav-link-join">Join Us</a>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <section class="gallery-section">
-      <h1 class="gallery-title">SPARK GALLERY</h1>
-      <div class="slider" id="slider">
-        <div class="slide-track">
-          <div class="slide"><img src="/Components/Gallery/img1.jpg" alt="Event 1"></div>
-          <div class="slide"><img src="/Components/Gallery/img2.jpg" alt="Event 2"></div>
-          <div class="slide"><img src="/Components/Gallery/img3.jpg" alt="Event 3"></div>
-          <div class="slide"><img src="/Components/Gallery/img21.jpg" alt="Event 4"></div>
-          <div class="slide"><img src="/Components/Gallery/img5.jpg" alt="Event 5"></div>
-          <div class="slide"><img src="/Components/Gallery/img6.jpg" alt="Event 6"></div>
-          <div class="slide"><img src="/Components/Gallery/img7.jpg" alt="Event 7"></div>
-          <div class="slide"><img src="/Components/Gallery/img8.jpg" alt="Event 8"></div>
-          <div class="slide"><img src="/Components/Gallery/img9.jpg" alt="Event 9"></div>
-          <div class="slide"><img src="/Components/Gallery/img10.jpg" alt="Event 10"></div>
+    <main>
+        <section class="gallery-section">
+            <h1 class="gallery-title">SPARK GALLERY</h1>
+            <p class="gallery-subtitle">A visual journey through the history of our work, passion, and creativity. Each
+                photograph tells a unique story of our collective spirit.</p>
+            <br>
+            <br>
+            <br>
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item" data-index="0">
+                    <div class="gallery-image-wrapper">
+                        <img src="img1.jpg" alt="Event 1" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <div class="gallery-image-wrapper">
+                        <img src="img2.jpg" alt="Event 2" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <div class="gallery-image-wrapper">
+                        <img src="img3.jpg" alt="Event 3" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <div class="gallery-image-wrapper">
+                        <img src="img21.jpg" alt="Event 4" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <div class="gallery-image-wrapper">
+                        <img src="img5.jpg" alt="Event 5" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="5">
+                    <div class="gallery-image-wrapper">
+                        <img src="img6.jpg" alt="Event 6" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="6">
+                    <div class="gallery-image-wrapper">
+                        <img src="img7.jpg" alt="Event 7" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="7">
+                    <div class="gallery-image-wrapper">
+                        <img src="img8.jpg" alt="Event 8" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="8">
+                    <div class="gallery-image-wrapper">
+                        <img src="img9.jpg" alt="Event 9" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="9">
+                    <div class="gallery-image-wrapper">
+                        <img src="img10.jpg" alt="Event 10" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="10">
+                    <div class="gallery-image-wrapper">
+                        <img src="img21.jpg" alt="Event 11" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="11">
+                    <div class="gallery-image-wrapper">
+                        <img src="img12.jpg" alt="Event 12" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="12">
+                    <div class="gallery-image-wrapper">
+                        <img src="img13.jpg" alt="Event 13" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="13">
+                    <div class="gallery-image-wrapper">
+                        <img src="img14.jpg" alt="Event 14" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="14">
+                    <div class="gallery-image-wrapper">
+                        <img src="img15.jpg" alt="Event 15" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="15">
+                    <div class="gallery-image-wrapper">
+                        <img src="img16.jpg" alt="Event 16" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="16">
+                    <div class="gallery-image-wrapper">
+                        <img src="img17.jpg" alt="Event 17" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="17">
+                    <div class="gallery-image-wrapper">
+                        <img src="img18.jpg" alt="Event 18" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="18">
+                    <div class="gallery-image-wrapper">
+                        <img src="img19.jpg" alt="Event 19" class="gallery-image">
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="19">
+                    <div class="gallery-image-wrapper">
+                        <img src="img20.jpg" alt="Event 20" class="gallery-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-image">
         </div>
-        <br><br>
-        <div class="slide-track">
-          <div class="slide"><img src="/Components/Gallery/img21.jpg" alt="Event 11"></div>
-          <div class="slide"><img src="/Components/Gallery/img12.jpg" alt="Event 12"></div>
-          <div class="slide"><img src="/Components/Gallery/img13.jpg" alt="Event 13"></div>
-          <div class="slide"><img src="/Components/Gallery/img14.jpg" alt="Event 14"></div>
-          <div class="slide"><img src="/Components/Gallery/img15.jpg" alt="Event 15"></div>
-          <div class="slide"><img src="/Components/Gallery/img16.jpg" alt="Event 16"></div>
-          <div class="slide"><img src="/Components/Gallery/img17.jpg" alt="Event 17"></div>
-          <div class="slide"><img src="/Components/Gallery/img18.jpg" alt="Event 18"></div>
-          <div class="slide"><img src="/Components/Gallery/img19.jpg" alt="Event 19"></div>
-          <div class="slide"><img src="/Components/Gallery/img20.jpg" alt="Event 20"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 SPARK. All rights reserved.</p>
-      <div>
-        <a href="#" class="footer-link">Privacy Policy</a> |
-        <a href="#" class="footer-link">Terms of Service</a>
+        <a class="lightbox-prev">&#10094;</a>
+        <a class="lightbox-next">&#10095;</a>
     </div>
-  </footer>
-  <script src="/Pages_js/gallery.js"></script>
+
+    <footer>
+        <p>© 2025 SPARK. All rights reserved.</p>
+        <div>
+            <a href="#" class="footer-link">Privacy Policy</a> <span>|</span>
+            <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+    </footer>
+    <script src="gallery.js"></script>
 </body>
 
 </html>
+
+ 
