@@ -351,8 +351,8 @@ main {
 
 .lightbox-content {
   position: relative;
-  max-width: 50%; /* Limits the image width */
-  max-height: 60%; /* Limits the image height */
+  max-width: 84%; /* Limits the image width */
+  max-height: 100%; /* Limits the image height */
   transition: all 0.3s ease;
   border-radius: 10px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
