@@ -58,3 +58,27 @@ document.addEventListener("DOMContentLoaded", function () {
     slider.classList.remove("blurred", "paused");
   });
 });
+
+let prevScroll = window.scrollY;
+const navbar = document.getElementById("navbar");
+const navbarHeight = navbar.offsetHeight;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll <= navbarHeight) {
+    navbar.style.top = "0";
+  } else if (currentScroll > prevScroll) {
+    navbar.style.top = `-${navbarHeight}px`;
+  } else {
+    navbar.style.top = "0";
+  }
+
+  prevScroll = currentScroll;
+
+  if (window.scrollY > 10) {
+  navbar.classList.add("scrolled");
+} else {
+  navbar.classList.remove("scrolled");
+}
+});
