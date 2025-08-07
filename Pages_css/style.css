@@ -165,7 +165,7 @@ body {
 .social-bar a:hover {
   color: yellow;
 }
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .social-bar {
     display: none;
   }
