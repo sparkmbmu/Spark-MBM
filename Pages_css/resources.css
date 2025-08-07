@@ -9,6 +9,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   /* background: linear-gradient(to bottom, #1e1e2f, #121212);  */
    background-color: #10131b;
+   /* background-image: url("blurbg.png"); */
   color: white;
   min-height: 100vh;
 }
@@ -170,83 +171,72 @@ body {
 }
 
 
-.hero {
-  background-image: url("/Components/Resources/bgresources.png");
-  background-size: cover;
-  background-position: center;
-  height:100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position:relative
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/Components/Resources/bgresources.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 1rem;
+    position: relative;
+    animation: panBackground 30s infinite alternate ease-in-out;
 }
 
-.hero-content{
-  background-color:rgba(0,0,0,0.5);
-  padding: 40px;
-  border-radius: 10px;
-  width:700px;
-  height: 250px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+@keyframes panBackground {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
 }
 
 .hero-content h1 {
-  font-size: 4rem;
-  margin-bottom: 15px;
-  color:rgb(255, 111, 0);
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ff8c00;
+    text-shadow: 0 0 20px rgba(255, 140, 0, 0.6);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
 }
 
 .hero-content p {
-  font-size: 1.1em;
-  line-height: 1.5;
-  color:white;
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+    color: #ccc;
 }
-
-
-
-footer {
-  background: #111;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 3rem;
-}
-
-footer p {
-  margin: 0.6rem 0;
-}
-
-.footer-link {
-  color: cyan;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-.footer-link:hover {
-  text-decoration: underline;
-}
-
-/* Section Styling */
-
-/* .backimg{
-  background-image: url("bgresour.avif");
-  background-size:cover ;
-} */
 
 .section-container {
-  margin-bottom: 80px;
-  margin-top: 50px;
-  box-shadow:rgba(0, 0, 0, 0.5);
-  
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 1rem;
 }
 
-.section-container h1 {
-  font-size: 2.2rem;
-  font-weight: 400;
-  margin-bottom: 30px;
-  text-align: center;
-  color:aliceblue;
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    color: #fff;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ff6a00;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .card-row {
@@ -263,11 +253,12 @@ footer p {
 
 /* Flip Card Core */
 .flip-card {
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 260px;
   perspective: 1000px;
   cursor: pointer;
 }
+
 
 .flip-inner {
   width: 100%;
@@ -300,6 +291,9 @@ footer p {
   border-radius: 10px;
 }
 
+.flip-front:hover img {
+  filter: blur(2px);
+}
 .flip-back {
   background:rgb(17,24,39, 0.6);
   padding: 20px;
@@ -330,6 +324,28 @@ footer p {
   padding: 8px 15px;
   border-radius: 5px;
 }
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: 0.6rem 0;
+}
+
+.footer-link {
+  color: cyan;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
 
 .shiny-text {
   color: #b5b5b5a4;
