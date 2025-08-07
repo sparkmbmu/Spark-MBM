@@ -1,5 +1,3 @@
-
-
 const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   const hamburgerIcon = menuToggle.querySelector("svg:not(#close-icon)");
@@ -32,7 +30,10 @@ const menuToggle = document.getElementById("menu-toggle");
     }
   });
 
+  
   // Apply flip effect on all cards
+
+
 const flipCards = document.querySelectorAll('.flip-card');
 
 flipCards.forEach(card => {
