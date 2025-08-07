@@ -175,7 +175,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  box-shadow: 0 10px 25px -10px rgba(255, 140, 0, 0.3);
+  box-shadow: 0 10px 25px -10px rgba(255, 140, 0, 0.5);
 }
 
 .banner-img {
