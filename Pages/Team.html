@@ -116,7 +116,7 @@
           </div>
         </div>
         <div class="member-info">
-          <h3>Abhishek Gour</h3>
+          <h3>Abhisek Gour</h3>
           <p class="role">Assistant Professor</p>
           <p class="bio">Computer Science and Eng.</p>
         </div>
@@ -141,8 +141,7 @@
               <div class="icon-bar">
                 <a href="https://www.linkedin.com/in/garvit-jain-7b2a9a311/" target="_blank"><i
                     data-feather="linkedin"></i></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mayank1gdsc@gmail.com" target="_blank"><i
-                    data-feather="mail"></i></a>
+                <a class="email-link" data-email="garvitjain2504@gmail.com"><i data-feather="mail"></i></a>
               </div>
             </div>
           </div>
@@ -441,6 +440,20 @@
 
     <script src="/Pages_js/Team.js"></script>
     <script>feather.replace();</script>
+    <script>
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  document.querySelectorAll('.email-link').forEach(link => {
+    const email = link.getAttribute('data-email');
+    if (isMobile) {
+      // Default mail app for mobile
+      link.href = `mailto:${email}`;
+    } else {
+      // Gmail web compose for desktop
+      link.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+      link.target = "_blank";
+    }
+  });
+</script>
 </body>
 
 </html>
