@@ -249,6 +249,18 @@ footer p {
 .footer-link:hover {
   text-decoration: underline;
 }
+footer .connections{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+footer .connections a{
+  color: white;
+  font-size: 16px;
+}
+footer .connections a:hover{
+  color: yellow;
+}
 
 .shiny-text {
   color: #b5b5b5a4;

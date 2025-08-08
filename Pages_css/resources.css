@@ -330,22 +330,26 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 footer p {
   margin: 0.6rem 0;
 }
 
-.footer-link {
-  color: cyan;
-  text-decoration: none;
-  margin: 0 0.5rem;
+footer .connections{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
-
-.footer-link:hover {
-  text-decoration: underline;
+footer .connections a{
+  color: white;
+  font-size: 16px;
 }
-
+footer .connections a:hover{
+  color: yellow;
+}
 
 .shiny-text {
   color: #b5b5b5a4;

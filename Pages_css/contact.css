@@ -284,6 +284,9 @@ footer {
   text-align: center;
   padding: 1.5rem 1rem;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 footer a {
@@ -293,6 +296,18 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+footer .connections{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+footer .connections a{
+  color: white;
+  font-size: 16px;
+}
+footer .connections a:hover{
+  color: yellow;
 }
 
 @media (max-width: 600px) {
