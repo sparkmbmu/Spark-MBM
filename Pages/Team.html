@@ -453,14 +453,18 @@
     <script src="/Pages_js/Team.js"></script>
     <script>feather.replace();</script>
     <script>
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  // Detect mobile (even in desktop mode)
+  const isReallyMobile =
+    /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
+    (window.innerWidth < 1025 && 'ontouchstart' in window);
+
   document.querySelectorAll('.email-link').forEach(link => {
     const email = link.getAttribute('data-email');
-    if (isMobile) {
-      // Default mail app for mobile
+    if (isReallyMobile) {
+      // Open default email app
       link.href = `mailto:${email}`;
     } else {
-      // Gmail web compose for desktop
+      // Open Gmail web
       link.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
       link.target = "_blank";
     }
