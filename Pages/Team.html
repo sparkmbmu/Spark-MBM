@@ -453,18 +453,16 @@
     <script src="/Pages_js/Team.js"></script>
     <script>feather.replace();</script>
     <script>
-  // Detect mobile (even in desktop mode)
-  const isReallyMobile =
-    /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
-    (window.innerWidth < 1025 && 'ontouchstart' in window);
+  // Detect if the device is touch-capable (mobile or tablet, even in desktop mode)
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
   document.querySelectorAll('.email-link').forEach(link => {
     const email = link.getAttribute('data-email');
-    if (isReallyMobile) {
-      // Open default email app
+    if (isTouchDevice) {
+      // Always open default mail app for touch devices
       link.href = `mailto:${email}`;
     } else {
-      // Open Gmail web
+      // Open Gmail web compose for non-touch desktops
       link.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
       link.target = "_blank";
     }
