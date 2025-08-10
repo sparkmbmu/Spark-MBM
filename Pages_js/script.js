@@ -159,3 +159,19 @@ window.addEventListener("scroll", () => {
   navbar.classList.remove("scrolled");
 }
 });
+
+// contact bar logic 
+
+ const form = document.getElementById("contactForm");
+  const thankYouMessage = document.getElementById("thankYouMessage");
+  const returnBtn = document.getElementById("returnBtn");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent the form from submitting traditionally
+    form.style.display = "none";
+    thankYouMessage.style.display = "block";
+  });
+
+  returnBtn.addEventListener("click", function() {
+    window.location.reload(); // Reload the page to show the form again
+  });
