@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0.8);
     color: white;
     min-height: 100vh;
     line-height: 1.6;
@@ -471,6 +471,7 @@ footer .connections a{
 footer .connections a:hover{
   color: yellow;
 }
+
 
 
 
