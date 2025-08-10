@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    background-image: url("newbg.jpg");
+    background-image: url("/Components/Gallery/newbg.jpg");
     background-size: cover;
     background-attachment: fixed;
     padding: 2rem 0;
@@ -505,3 +505,4 @@ footer .connections a{
 footer .connections a:hover{
   color: yellow;
 }
+
