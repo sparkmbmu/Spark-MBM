@@ -952,6 +952,13 @@ html {
   margin-bottom: 1.5rem;
   color: #ccc;
 }
+#contactForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.4rem;
+}
 
 .contact-box input,
 .contact-box textarea {
