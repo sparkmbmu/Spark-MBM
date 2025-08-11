@@ -489,7 +489,7 @@ body {
 
 .arrow-container {
   position: relative;
-  top: 25vh;
+  top: 50vh;
 }
 
 .arrow {
@@ -805,7 +805,7 @@ footer .connections a:hover{
 .section-title::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 6px;
   height: 3px;
   background-color: #ff6a00;
   margin: 10px auto 0;
@@ -813,17 +813,19 @@ footer .connections a:hover{
 }
 .slider-wrapper {
   position: relative;
+  transform: scale(0.9);
 }
 .slider-container {
   display: flex;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding-bottom: 1rem; /* for scrollbar */
+  gap: 10px;
+  padding-bottom: rem; /* for scrollbar */
   scrollbar-color: #ff6a00 #0d1117;
 }
 .slider-container::-webkit-scrollbar {
-  height: 8px;
+  height: 6px;
 }
 .slider-container::-webkit-scrollbar-track {
   background: var(--color-card-bg);
@@ -845,10 +847,11 @@ footer .connections a:hover{
   transform: scale(1.02);
 }
 .slide img {
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   object-fit: cover;
   display: block;
+  border-radius: 10px;
 }
 @media (min-width: 768px) {
   .slide {
