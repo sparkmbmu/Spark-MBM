@@ -488,8 +488,8 @@ main {
 }
 
 .lightbox-close {
-  top: 15px;
-  right: 15px;
+  top: 30px;
+  right: 25px;
   font-size: 2rem;
 }
 
