@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+   font-family: "Segoe UI", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
   overflow-x: hidden;
@@ -86,15 +86,15 @@ body {
   display: flex;
   gap: 1.5rem;
 }
-.nav-link-join {
+.nav-link-join{
   color: white;
   border-radius: 6px;
-  background: #ff6a00;
+  background: #ff6a00 ;
   text-decoration: none;
   font-weight: 500;
   position: relative;
   padding: 0.5rem 1rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out ;
 }
 .nav-link-join:hover {
   transform: scale(1.05);
@@ -148,7 +148,7 @@ body {
   z-index: 999;
 }
 @media (max-width: 800px) {
-    .nav-links {
+  .nav-links {
     display: none;
     flex-direction: column;
     background-color: #111;
@@ -174,7 +174,10 @@ body {
   }
   .close-icon {
   display: none;
-}
+  }
+  .logo{
+    font-size: 1.8rem;
+  }
 }
 
 .shiny-text {
@@ -295,8 +298,10 @@ body {
   justify-content: center;
   margin-bottom: 4rem;
   border-bottom: 1px solid var(--color-border);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-left: 200px;
 }
-
 .tab-link {
   padding: 1rem 1.5rem;
   cursor: pointer;
