@@ -137,9 +137,19 @@ body {
 
 /* Responsive Navbar */
 @media (max-width: 800px) {
-    .nav-links.desktop {
-        display: none;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 999;
+  }
+
   .nav-links.active {
     display: flex;
     color: cyan;
