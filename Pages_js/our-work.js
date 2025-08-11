@@ -1,164 +1,219 @@
-
-// --- Initialize Feather Icons ---
-feather.replace();
-
-// --- Navbar Scroll Behavior ---
- const menuToggle = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const hamburgerIcon = menuToggle.querySelector("svg:not(#close-icon)");
-  const closeIcon = document.getElementById("close-icon");
-  const links = document.querySelectorAll("#mobile-menu .nav-link, #mobile-menu .nav-link-join");
-
-  function toggleMenu() {
-    const isOpen = mobileMenu.classList.toggle("active");
-    hamburgerIcon.style.display = isOpen ? "none" : "block";
-    closeIcon.style.display = isOpen ? "block" : "none";
-  }
-
-  menuToggle.addEventListener("click", toggleMenu);
-
-links.forEach(link => {
-    link.addEventListener("click", () => {
-        mobileMenu.classList.remove("active");
-        hamburgerIcon.style.display = "block";
-        closeIcon.style.display = "none";
-
-        // Optional: Add active class (if not server-handled)
-        links.forEach(l => l.classList.remove("active"));
-        link.classList.add("active");
-    });
-});
-const currentPath = window.location.pathname;
-document.querySelectorAll(".nav-link").forEach(link => {
-    if (link.getAttribute("href") === currentPath) {
-        link.classList.add("active");
-    }
-});
-
-let prevScroll = window.scrollY;
-const navbar = document.getElementById("navbar");
-const navbarHeight = navbar.offsetHeight;
-
-window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-
-    if (currentScroll <= navbarHeight) {
-        navbar.style.top = "0";
-    } else if (currentScroll > prevScroll) {
-        navbar.style.top = `-${navbarHeight}px`;
-    } else {
-        navbar.style.top = "0";
-    }
-
-    prevScroll = currentScroll;
-
-    if (window.scrollY > 10) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-});
-
-// --- Tab Navigation Logic ---
-function openTab(evt, tabName) {
-    const tabcontent = document.getElementsByClassName("tab-content");
-    for (let i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    const tablinks = document.getElementsByClassName("tab-link");
-    for (let i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// --- Countdown Timer Logic ---
 document.addEventListener('DOMContentLoaded', () => {
-    const countdownElements = document.querySelectorAll('.countdown');
-    countdownElements.forEach(el => {
-        const targetDate = new Date(el.dataset.date).getTime();
+            // --- Initialize Feather Icons ---
+            feather.replace();
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
+            // --- Winner Data ---
+            const winnersData = {
+                "Contest 2.0": {
+                    "Beginner": [
+                        { name: "Piyush Lamba", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Piyush" },
+                        { name: "Niyati Bhandari", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Niyati" },
+                        { name: "Priyanka Suthar", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Priyanka" }
+                    ],
+                    "Intermediate": [
+                        { name: "Tanvi Shekhawat", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Tanvi" },
+                        { name: "Randeep Singh", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Randeep" },
+                        { name: "Yash Garg", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Yash" }
+                    ],
+                    "Hard": [
+                        { name: "Mohit Pohwani", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Mohit" },
+                        { name: "Garvit Jain", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Garvit" },
+                        { name: "Himanshi Mathur", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Himanshi" }
+                    ]
+                },
+                "Contest 1.0": {
+                    "Beginner": [
+                        { name: "Student A", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=A" },
+                        { name: "Student B", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=B" },
+                        { name: "Student C", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=C" }
+                    ],
+                    "Intermediate": [
+                        { name: "Student D", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=D" },
+                        { name: "Student E", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=E" },
+                        { name: "Student F", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=F" }
+                    ],
+                    "Hard": [
+                        { name: "Student G", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=G" },
+                        { name: "Student H", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=H" },
+                        { name: "Student I", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=I" }
+                    ]
+                }
+            };
 
-            if (distance < 0) {
-                el.textContent = "Event Over";
-                return;
+            // --- Winner Modal Logic ---
+            const winnerModal = document.getElementById('winner-modal');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+            const modalTitle = document.getElementById('modal-title');
+            const modalGallery = document.getElementById('modal-winners-gallery');
+            const viewWinnersBtns = document.querySelectorAll('.view-winners-btn');
+
+            function openWinnerModal(event) {
+                const contest = event.currentTarget.dataset.contest;
+                const level = event.currentTarget.dataset.level;
+                const winners = winnersData[contest]?.[level];
+
+                if (!winners) {
+                    console.error("Winners not found for", contest, level);
+                    return;
+                }
+
+                modalTitle.textContent = `${contest} - ${level} Winners`;
+                modalGallery.innerHTML = ''; // Clear previous winners
+
+                const positions = ['first', 'second', 'third'];
+                const badges = ['🥇1st', '🥈2nd', '🥉3rd'];
+
+                winners.forEach((winner, index) => {
+                    const winnerCard = `
+                        <div class="winner ${positions[index]}">
+                            <p class="h-upper position-badge">${badges[index]}</p>
+                            <img src="${winner.img}" alt="Winner ${winner.name}" onerror="this.onerror=null;this.src='https://placehold.co/250x250/1a1a1a/ffffff?text=Image+Error';">
+                            <p class="h-lower">${winner.name}</p>
+                        </div>
+                    `;
+                    modalGallery.innerHTML += winnerCard;
+                });
+
+                winnerModal.classList.add('active');
+                document.body.classList.add('modal-open');
             }
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            el.textContent = days;
+            function closeWinnerModal() {
+                winnerModal.classList.remove('active');
+                document.body.classList.remove('modal-open');
+            }
+
+            viewWinnersBtns.forEach(btn => btn.addEventListener('click', openWinnerModal));
+            modalCloseBtn.addEventListener('click', closeWinnerModal);
+            winnerModal.addEventListener('click', (event) => {
+                if (event.target === winnerModal) {
+                    closeWinnerModal();
+                }
+            });
+            
+            // --- Countdown Timer Logic ---
+            const countdownElements = document.querySelectorAll('.countdown');
+            countdownElements.forEach(el => {
+                const targetDate = new Date(el.dataset.date).getTime();
+                let intervalId;
+                
+                function updateCountdown() {
+                    const now = new Date().getTime();
+                    const distance = targetDate - now;
+                    
+                    if (distance < 0) {
+                        el.textContent = "Event Over";
+                        if(el.nextElementSibling) {
+                           el.nextElementSibling.style.display = 'none';
+                        }
+                        if (intervalId) clearInterval(intervalId);
+                        return;
+                    }
+                    
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    el.textContent = days;
+                }
+                
+                updateCountdown();
+                intervalId = setInterval(updateCountdown, 1000 * 60 * 60 * 24);
+            });
+
+            // --- View More Logic ---
+            const viewMoreContestsBtn = document.getElementById('view-more-contests');
+            const contestsHidden = document.getElementById('contests-hidden');
+            viewMoreContestsBtn.addEventListener('click', () => {
+                const isHidden = contestsHidden.style.display === 'none' || contestsHidden.style.display === '';
+                contestsHidden.style.display = isHidden ? 'block' : 'none';
+                viewMoreContestsBtn.textContent = isHidden ? 'View Less' : 'View More';
+            });
+
+            const viewMoreSessionsBtn = document.getElementById('view-more-sessions');
+            const sessionsHidden = document.getElementById('sessions-hidden');
+            viewMoreSessionsBtn.addEventListener('click', () => {
+                const isHidden = sessionsHidden.style.display === 'none' || sessionsHidden.style.display === '';
+                sessionsHidden.style.display = isHidden ? 'block' : 'none';
+                viewMoreSessionsBtn.textContent = isHidden ? 'View Less' : 'View More';
+            });
+
+
+            // --- Animated Canvas Background Logic ---
+            const canvas = document.getElementById('canvas-background');
+            const ctx = canvas.getContext('2d');
+            
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resizeCanvas();
+
+            let particlesArray;
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = canvas.height + Math.random() * 100;
+                    this.size = Math.random() * 2 + 0.5;
+                    this.speedY = Math.random() * 3 + 1;
+                    this.speedX = (Math.random() * 3) - 1.5;
+                    this.color = `rgba(255, 106, 0, ${Math.random() * 0.5 + 0.5})`; 
+                }
+                update() {
+                    this.y -= this.speedY;
+                    this.x += this.speedX;
+                    if (this.y < 0) {
+                        this.x = Math.random() * canvas.width;
+                        this.y = canvas.height + Math.random() * 100;
+                    }
+                }
+                draw() {
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            function initParticles() {
+                particlesArray = [];
+                let numberOfParticles = (canvas.width / 15);
+                for (let i = 0; i < numberOfParticles; i++) {
+                    particlesArray.push(new Particle());
+                }
+            }
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (let i = 0; i < particlesArray.length; i++) {
+                    particlesArray[i].update();
+                    particlesArray[i].draw();
+                }
+                requestAnimationFrame(animateParticles);
+            }
+
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                initParticles();
+            });
+
+            initParticles();
+            animateParticles();
+        });
+
+        // --- Tab Navigation Logic (kept global for onclick) ---
+        function openTab(evt, tabName) {
+            const tabcontent = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            const tablinks = document.getElementsByClassName("tab-link");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
         }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000 * 60 * 60 * 24); // Update once a day
-    });
-});
-
-// --- Animated Canvas Background Logic ---
-const canvas = document.getElementById('canvas-background');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particlesArray;
-
-// Particle class for the fire/spark effect
-class Particle {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = canvas.height + Math.random() * 100; // Start below the screen
-        this.size = Math.random() * 2 + 0.5;
-        this.speedY = Math.random() * 3 + 1;
-        this.speedX = (Math.random() * 3) - 1.5;
-        // Color with varying opacity for a glowing effect
-        this.color = `rgba(255, 106, 0, ${Math.random() * 0.5 + 0.5})`;
-    }
-    update() {
-        this.y -= this.speedY;
-        this.x += this.speedX;
-
-        // Reset particle when it goes off screen
-        if (this.y < 0) {
-            this.x = Math.random() * canvas.width;
-            this.y = canvas.height + Math.random() * 100;
-        }
-    }
-    draw() {
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-    }
-}
-
-// Create particle array
-function init() {
-    particlesArray = [];
-    let numberOfParticles = (canvas.width / 10); // Adjust density
-    for (let i = 0; i < numberOfParticles; i++) {
-        particlesArray.push(new Particle());
-    }
-}
-
-// Animation loop
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let i = 0; i < particlesArray.length; i++) {
-        particlesArray[i].update();
-        particlesArray[i].draw();
-    }
-    requestAnimationFrame(animate);
-}
-
-// Resize event
-window.addEventListener('resize', function () {
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
-    init();
-});
-
-init();
-animate();
+        
+        // Set the default active tab on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('Contests').style.display = "block";
+        });
