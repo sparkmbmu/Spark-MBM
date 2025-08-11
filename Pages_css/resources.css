@@ -200,7 +200,7 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
     url("/Components/Resources/bgresources.png") no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   height: 70vh;
   display: flex;
   align-items: center;
@@ -624,3 +624,4 @@ html {
   scrollbar-color: #ff6a00 #0d1117;
   /* thumb track */
 }
+
