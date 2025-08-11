@@ -478,7 +478,7 @@ body {
 
   .toggle-arrow {
     position: absolute;
-    right: 20px;
+    right: 33px;
   }
 
   .btn-resource {
@@ -624,4 +624,5 @@ html {
   scrollbar-color: #ff6a00 #0d1117;
   /* thumb track */
 }
+
 
