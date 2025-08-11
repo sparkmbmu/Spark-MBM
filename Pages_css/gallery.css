@@ -440,21 +440,22 @@ main {
 .secondary-btn {
 
   background-color: #ff6a00;
-  height: 40px;
-  width: 100px;
-  border: 2px solid var(--primary-gold);
-  color: whitesmoke;
-  font-family: var(--font-heading);
+  color: black;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
   font-size: 1rem;
   font-weight: 700;
-  padding: var(--space-md) var(--space-lg);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .secondary-btn:hover {
-  background-color: yellow;
+  transform: translateY(-4px) scale(1.02);
+  background-color: rgb(203, 203, 0);
   color: black;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
 }
