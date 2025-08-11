@@ -32,7 +32,7 @@ body {
 }
 .logo {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   justify-content: center;
   align-items: center;
   font-weight: 1000;
@@ -140,7 +140,10 @@ body {
   }
   .close-icon {
   display: none;
-}
+  }
+  .logo{
+    font-size: 1.8rem;
+  }
 }
 .social-bar {
   position: fixed;
@@ -482,7 +485,7 @@ body {
 .arrow {
   position: absolute;
   top: 50%;
-  font-size: 5rem;
+  font-size: 3rem;
   background-color: transparent;
   border: none;
   color: white;
@@ -535,7 +538,7 @@ body {
 
 .winner:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(255, 100, 0, 0.5);
+  box-shadow: 0 7px 30px rgba(255, 100, 0, 0.5);
 }
 .winner img {
   width: 100%;

@@ -66,7 +66,7 @@ body {
 }
 .logo {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   justify-content: center;
   align-items: center;
   font-weight: 1000;
@@ -675,4 +675,64 @@ footer .connections a {
 }
 footer .connections a:hover {
   color: yellow;
+}
+
+/* scrollbar styling  */
+
+/* ===== Chrome, Edge, Safari ===== */
+::-webkit-scrollbar {
+  width: 14px;  /* Wider for more realistic look */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0d1117;       /* Dark background */
+  border-left: 1px solid #1a1f27; /* Slight inner border */
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff6a00, #cc5500); /* Gradient orange */
+  border-radius: 6px;
+  border: 2px solid #0d1117;  /* Creates gap between track & thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff7f26, #e65c00); /* Brighter on hover */
+}
+
+/* ===== Scrollbar Buttons (Arrows) ===== */
+
+/* Common button base */
+::-webkit-scrollbar-button {
+  background-color: #0d1117;  /* Matches track */
+  border: none;
+  height: 16px; /* Controls button height */
+}
+
+/* Up arrow */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ff6a00; /* Arrow color */
+}
+
+/* Down arrow */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #ff6a00; /* Arrow color */
+}
+
+/* Hover effect on arrows */
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover,
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  border-bottom-color: #ff7f26; /* Up arrow hover */
+  border-top-color: #ff7f26;    /* Down arrow hover */
+}
+
+/* ===== Firefox ===== */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #ff6a00 #0d1117; /* thumb track */
 }
