@@ -303,10 +303,9 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
-  margin-bottom: 60px;
 }
 .champs-btn{
-  background-color: orange;
+  background-color: #ff6a00;
   color: black;
   border: none;
   padding: 0.75rem 1.2rem;
@@ -316,11 +315,15 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 70px;
 }
 .champs-btn:hover{
   transform: translateY(-4px) scale(1.02);
-  background-color: #ff9900;
-  box-shadow: 0px 4px 15px rgba(255, 153, 0, 0.5);
+  background-color: rgb(203, 203, 0);
+  color: black;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
 }
 .hero-content {
   display: flex;
@@ -369,6 +372,7 @@ body {
     flex-direction: row;
   }
 }
+
 .primary-btn {
   background: linear-gradient(270deg, #ff0000, #ff6a00, #ffd700);
   color: white;
@@ -387,6 +391,8 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 0 5px yellow;
 }
+
+
 .secondary-btn {
   background: transparent;
   border: 2px solid white;
@@ -402,6 +408,8 @@ body {
   transform: translateY(-2px);
   color: #111827;
 }
+
+
 .icon {
   width: 1.25rem;
   height: 1.25rem;
