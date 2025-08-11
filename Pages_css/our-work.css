@@ -147,8 +147,8 @@ body {
   right: 0;
   z-index: 999;
 }
-@media (max-width: 768px) {
-  .nav-links {
+@media (max-width: 800px) {
+    .nav-links {
     display: none;
     flex-direction: column;
     background-color: #111;
@@ -173,8 +173,8 @@ body {
     display: block;
   }
   .close-icon {
-    display: none;
-  }
+  display: none;
+}
 }
 
 .shiny-text {

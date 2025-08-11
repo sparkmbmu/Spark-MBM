@@ -113,7 +113,7 @@ body {
   right: 0;
   z-index: 999;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -850,62 +850,48 @@ footer .connections a:hover{
 
 /* scrollbar styling  */
 
-/* ===== Chrome, Edge, Safari ===== */
+
 ::-webkit-scrollbar {
-  width: 14px;  /* Wider for more realistic look */
+  width: 14px;  
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #0d1117;       /* Dark background */
-  border-left: 1px solid #1a1f27; /* Slight inner border */
+  background: #0d1117;     
+  border-left: 1px solid #1a1f27; 
 }
 
-/* Thumb */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ff6a00, #cc5500); /* Gradient orange */
+  background: linear-gradient(180deg, #ff6a00, #cc5500); 
   border-radius: 6px;
-  border: 2px solid #0d1117;  /* Creates gap between track & thumb */
+  border: 2px solid #0d1117; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ff7f26, #e65c00); /* Brighter on hover */
+  background: linear-gradient(180deg, #ff7f26, #e65c00); 
 }
 
-/* ===== Scrollbar Buttons (Arrows) ===== */
-
-/* Common button base */
 ::-webkit-scrollbar-button {
-  background-color: #0d1117;  /* Matches track */
+  background-color: #0d1117;  
   border: none;
-  height: 16px; /* Controls button height */
+  height: 16px; 
 }
 
-/* Up arrow */
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-bottom: 6px solid #ff6a00; /* Arrow color */
+  border-bottom: 6px solid #ff6a00;
 }
 
-/* Down arrow */
 ::-webkit-scrollbar-button:single-button:vertical:increment {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 6px solid #ff6a00; /* Arrow color */
+  border-top: 6px solid #ff6a00; 
 }
 
-/* Hover effect on arrows */
 ::-webkit-scrollbar-button:single-button:vertical:decrement:hover,
 ::-webkit-scrollbar-button:single-button:vertical:increment:hover {
-  border-bottom-color: #ff7f26; /* Up arrow hover */
-  border-top-color: #ff7f26;    /* Down arrow hover */
-}
-
-/* ===== Firefox ===== */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: #ff6a00 #0d1117; /* thumb track */
+  border-bottom-color: #ff7f26; 
+  border-top-color: #ff7f26;   
 }
 
 
@@ -931,6 +917,10 @@ html {
   text-decoration: underline;
 }
 
+.spark{
+  color: #cc5500;
+}
+
 .contact-box {
   background: rgba(20, 20, 20, 0.8);
   padding: 2rem;
@@ -951,6 +941,13 @@ html {
   font-size: 1rem;
   margin-bottom: 1.5rem;
   color: #ccc;
+}
+#contactForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.4rem;
 }
 
 .contact-box input,
