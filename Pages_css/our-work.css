@@ -454,6 +454,13 @@
             margin-bottom: 1rem;
         }
 
+        .batch-label {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: -0.3rem;
+}
+
+
         .h-upper {
             font-size: 1.2rem;
             font-weight: 700;

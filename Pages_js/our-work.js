@@ -6,36 +6,31 @@ document.addEventListener('DOMContentLoaded', () => {
             const winnersData = {
                 "Contest 2.0": {
                     "Beginner": [
-                        { name: "Piyush Lamba", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Piyush" },
-                        { name: "Niyati Bhandari", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Niyati" },
-                        { name: "Priyanka Suthar", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Priyanka" }
+                        { name: "Suraj Chouhan", img: "../Components/Home/Results/Spark_Contest_2/surajcho.jpg" , Batch: "2024-2028"},
+                        { name: "Harshit Seth", img: "../Components/Home/Results/Spark_Contest_2/harshit.jpeg" , Batch: "2024-2028"},
+                        { name: "Sujal Gupta", img: "../Components/Home/Results/Spark_Contest_2/sujal.jpg" , Batch: "2024-2028"}
                     ],
                     "Intermediate": [
-                        { name: "Tanvi Shekhawat", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Tanvi" },
-                        { name: "Randeep Singh", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Randeep" },
-                        { name: "Yash Garg", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Yash" }
-                    ],
-                    "Hard": [
-                        { name: "Mohit Pohwani", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Mohit" },
-                        { name: "Garvit Jain", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Garvit" },
-                        { name: "Himanshi Mathur", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Himanshi" }
+                        { name: "Priyank Mundel", img: "../Components/Home/Results/Spark_Contest_2/priyank.jpg" , Batch: "2024-2028"},
+                        { name: "Yogya Agarwal", img: "../Components/Home/Results/Spark_Contest_2/yogya.jpg" , Batch: "2024-2028"},
+                        { name: "Randeep Singh", img: "../Components/Home/Results/Spark_Contest_2/randeep.jpg" , Batch: "2024-2028"}
                     ]
                 },
                 "Contest 1.0": {
                     "Beginner": [
-                        { name: "Student A", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=A" },
-                        { name: "Student B", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=B" },
-                        { name: "Student C", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=C" }
+                        { name: "Piyush Lamba", img: "../Components/Home/Results/Spark_Contest_1/piyush.jpg" , Batch: "2024-2028"},
+                        { name: "Niyati Bhandari", img: "../Components/Home/Results/Spark_Contest_1/niyati.jpg" , Batch: "2024-2028"},
+                        { name: "Priyanka Suthar", img: "../Components/Home/Results/Spark_Contest_1/priyanka.jpg" , Batch: "2024-2028"}
                     ],
                     "Intermediate": [
-                        { name: "Student D", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=D" },
-                        { name: "Student E", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=E" },
-                        { name: "Student F", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=F" }
+                        { name: "Tanvi Shekhawat", img: "../Components/Home/Results/Spark_Contest_1/tanvish.jpg" , Batch: "2024-2028"},
+                        { name: "Randeep Singh", img: "../Components/Home/Results/Spark_Contest_1/randeep.jpg" , Batch: "2024-2028"},
+                        { name: "Yash Garg", img: "../Components/Home/Results/Spark_Contest_1/yash.jpg" , Batch: "2024-2028"}
                     ],
                     "Hard": [
-                        { name: "Student G", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=G" },
-                        { name: "Student H", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=H" },
-                        { name: "Student I", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=I" }
+                        { name: "Mohit Pohwani", img: "../Components/Home/Results/Spark_Contest_1/mohitpoh.jpg" , Batch: "2024-2028"},
+                        { name: "Garvit Jain", img: "../Components/Home/Results/Spark_Contest_1/garvit.png" , Batch: "2024-2028"},
+                        { name: "Himanshi Mathur", img: "../Components/Home/Results/Spark_Contest_1/himanshi.jpeg" , Batch: "2024-2028"}
                     ]
                 }
             };
@@ -69,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p class="h-upper position-badge">${badges[index]}</p>
                             <img src="${winner.img}" alt="Winner ${winner.name}" onerror="this.onerror=null;this.src='https://placehold.co/250x250/1a1a1a/ffffff?text=Image+Error';">
                             <p class="h-lower">${winner.name}</p>
+                            <p class="batch-label">${winner.Batch}</p>
                         </div>
                     `;
                     modalGallery.innerHTML += winnerCard;
