@@ -3,19 +3,19 @@
 feather.replace();
 
 // --- Navbar Scroll Behavior ---
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-const hamburgerIcon = menuToggle.querySelector("svg:not(#close-icon)");
-const closeIcon = document.getElementById("close-icon");
-const links = document.querySelectorAll("#mobile-menu .nav-link, #mobile-menu .nav-link-join");
+ const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const hamburgerIcon = menuToggle.querySelector("svg:not(#close-icon)");
+  const closeIcon = document.getElementById("close-icon");
+  const links = document.querySelectorAll("#mobile-menu .nav-link, #mobile-menu .nav-link-join");
 
-function toggleMenu() {
+  function toggleMenu() {
     const isOpen = mobileMenu.classList.toggle("active");
     hamburgerIcon.style.display = isOpen ? "none" : "block";
     closeIcon.style.display = isOpen ? "block" : "none";
-}
+  }
 
-menuToggle.addEventListener("click", toggleMenu);
+  menuToggle.addEventListener("click", toggleMenu);
 
 links.forEach(link => {
     link.addEventListener("click", () => {

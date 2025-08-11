@@ -160,18 +160,18 @@ window.addEventListener("scroll", () => {
 }
 });
 
-// contact bar logic 
+// contact form logic 
 
  const form = document.getElementById("contactForm");
   const thankYouMessage = document.getElementById("thankYouMessage");
   const returnBtn = document.getElementById("returnBtn");
 
   form.addEventListener("submit", function(e) {
-    e.preventDefault(); // Prevent the form from submitting traditionally
+    e.preventDefault(); 
     form.style.display = "none";
     thankYouMessage.style.display = "block";
   });
 
   returnBtn.addEventListener("click", function() {
-    window.location.reload(); // Reload the page to show the form again
+    window.location.reload(); 
   });

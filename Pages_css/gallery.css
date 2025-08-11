@@ -154,7 +154,7 @@ main {
   z-index: 999;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -167,7 +167,7 @@ main {
     gap: 1rem;
     z-index: 999;
   }
-
+  
   .nav-links.active {
     display: flex;
   }
