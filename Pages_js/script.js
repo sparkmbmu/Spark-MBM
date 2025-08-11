@@ -108,7 +108,7 @@ showGallery(0);
 
 function showGallery(index) {
   const titles = [
-    "Level – Advanced",
+    // "Level – Advanced",
     "Level – Intermediate",
     "Level – Beginner",
   ];
