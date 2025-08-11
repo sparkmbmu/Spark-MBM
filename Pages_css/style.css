@@ -577,16 +577,16 @@ body {
   animation: shine 3s ease infinite;
 }
 .second .position-badge {
-  background: linear-gradient(270deg, silver, #ccc, silver);
+  background: linear-gradient(270deg, silver, rgb(236, 236, 236), silver);
   background-size: 400% 400%;
   color: #111;
-  animation: pulse 2s ease-in-out infinite;
+  animation: shine 3s ease infinite;
 }
 .third .position-badge {
-  background: linear-gradient(270deg, #cd7f32, #b87333, #cd7f32);
+  background: linear-gradient(270deg, #cd7f32, #9a6738, #cd7f32);
   background-size: 400% 400%;
   color: #111;
-  animation: pulse 2s ease-in-out infinite;
+  animation: shine 3s ease infinite;
 }
 
 @keyframes shine {
