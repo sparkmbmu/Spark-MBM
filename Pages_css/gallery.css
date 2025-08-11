@@ -431,7 +431,7 @@ main {
   }
 }
 
-/* .button-group {
+ .button-group {
   display: flex;
   justify-content: center;
   margin-top: var(--space-xl);
@@ -459,7 +459,7 @@ main {
   color: black;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
 }
- */
+ 
 
 .lightbox-caption {
   font-family: 'Cormorant Garamond', serif;
@@ -649,3 +649,4 @@ html {
   /* thumb track */
 
 }
+
