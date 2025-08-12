@@ -72,16 +72,20 @@ const menuToggle = document.getElementById("menu-toggle");
                     modalCaption.textContent = item.alt;
                     currentIndex = index;
                     modal.style.display = 'flex';
+                    document.querySelector('header').style.transform = "translateY(-72px)"
+                    document.querySelector('body').style.overflowY = "hidden"
                 }
-
+                
                 galleryItems.forEach(item => {
                     item.addEventListener('click', () => {
                         const index = parseInt(item.getAttribute('data-index'));
                         showImage(index);
                     });
                 });
-
+                
                 const closeModal = () => {
+                    document.querySelector('header').style.transform = "translateY(0)"
+                    document.querySelector('body').style.overflowY = "scroll"
                     modal.style.display = 'none';
                 };
 
