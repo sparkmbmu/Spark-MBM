@@ -238,7 +238,7 @@ body {
 .hero-content p {
   max-width: 800px;
   margin: 0 auto;
-  font-weight: 400;
+  font-weight: 500;
   color: #ccc;
 
   font-size: 1.5rem;
@@ -628,6 +628,7 @@ html {
   scrollbar-color: #ff6a00 #0d1117;
   /* thumb track */
 }
+
 
 
 
