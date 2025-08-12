@@ -507,11 +507,11 @@ body {
   transform: scale(1.2);
 }
 .left-arrow {
-  left: 5%;
+  left: -1%;
 }
 
 .right-arrow {
-  right: 5%;
+  right: -1%;
 }
 
 .winners-section {
@@ -1030,6 +1030,9 @@ textarea {
 
   .contact-box p {
     font-size: 0.95rem;
+  }
+  .gallery-title{
+    font-size: 1.4rem;
   }
 }
 .cursor {
