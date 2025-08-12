@@ -287,6 +287,11 @@ main {
   transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+/* New class to hide gallery items for the "View More" feature */
+.gallery-item.is-hidden {
+    display: none;
+}
+
 .gallery-item.is-visible {
   transform: translateY(0);
   opacity: 1;
@@ -649,4 +654,3 @@ html {
   /* thumb track */
 
 }
-

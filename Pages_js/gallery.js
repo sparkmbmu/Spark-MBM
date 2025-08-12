@@ -137,3 +137,48 @@ window.addEventListener("scroll", () => {
   navbar.classList.remove("scrolled");
 }
 });
+
+// --- "View More" / "View Less" Functionality ---
+document.addEventListener('DOMContentLoaded', () => {
+    const viewMoreBtn = document.getElementById('view-more-btn');
+    const galleryGrid = document.getElementById('gallery-grid');
+    
+    if (!viewMoreBtn || !galleryGrid) return;
+
+    const allGalleryItems = Array.from(galleryGrid.querySelectorAll('.gallery-item'));
+    const initialItemsToShow = 9;
+    let isExpanded = false;
+
+    // Initially hide items that should not be visible
+    allGalleryItems.forEach((item, index) => {
+        if (index >= initialItemsToShow) {
+            item.classList.add('is-hidden');
+        }
+    });
+
+    // Hide the button if there are not enough items to hide
+    if (allGalleryItems.length <= initialItemsToShow) {
+        viewMoreBtn.style.display = 'none';
+    }
+
+    // Add a click event listener to the button
+    viewMoreBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded; // Toggle the state
+
+        if (isExpanded) {
+            // --- Show all items ---
+            allGalleryItems.forEach(item => {
+                item.classList.remove('is-hidden');
+            });
+            viewMoreBtn.textContent = 'View Less';
+        } else {
+            // --- Hide extra items ---
+            allGalleryItems.forEach((item, index) => {
+                if (index >= initialItemsToShow) {
+                    item.classList.add('is-hidden');
+                }
+            });
+            viewMoreBtn.textContent = 'View More';
+        }
+    });
+});
