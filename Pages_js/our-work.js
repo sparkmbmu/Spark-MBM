@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             function openWinnerModal(event) {
                 const contest = event.currentTarget.dataset.contest;
                 const level = event.currentTarget.dataset.level;
+                   document.querySelector('header').classList.add('hidden');
                 const winners = winnersData[contest]?.[level];
 
                 if (!winners) {
@@ -117,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
             function closeWinnerModal() {
                 winnerModal.classList.remove('active');
                 document.body.classList.remove('modal-open');
+                 document.querySelector('header').classList.remove('hidden');
+                
             }
 
             viewWinnersBtns.forEach(btn => btn.addEventListener('click', openWinnerModal));

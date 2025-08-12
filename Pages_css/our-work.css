@@ -41,6 +41,14 @@
         }
 
         /* header  */
+
+        
+    header {
+    transition: transform 0.3s ease;
+}
+    header.hidden {
+    transform: translateY(-72px);
+     }
         .navbar {
   background-color: #111;
   opacity: 0.95;
@@ -179,9 +187,37 @@
     font-size: 1.8rem;
   }
 }
+.shiny-text {
+  color: #b5b5b5a4;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 243, 175, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
 
         /* --- Hero Section --- */
         .hero {
+            margin-top: 100px;
             min-height: 50vh;
             display: flex;
             align-items: center;
