@@ -14,23 +14,29 @@
 
   menuToggle.addEventListener("click", toggleMenu);
 
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.remove("active");
-      hamburgerIcon.style.display = "block";
-      closeIcon.style.display = "none";
+  
+ // Handle click events (hamburger close + highlight)
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    hamburgerIcon.style.display = "block";
+    closeIcon.style.display = "none";
 
-      // Optional: Add active class (if not server-handled)
-      links.forEach(l => l.classList.remove("active"));
-      link.classList.add("active");
-    });
+    links.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
   });
-  const currentPath = window.location.pathname;
-  document.querySelectorAll(".nav-link").forEach(link => {
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
-    }
-  });
+});
+
+const currentFile = window.location.pathname.split("/").pop() || "index.html";
+document.querySelectorAll(".nav-link").forEach(link => {
+  const linkFile = link.getAttribute("href").split("/").pop();
+  if (linkFile === currentFile) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
             // --- Initialize Feather Icons ---
