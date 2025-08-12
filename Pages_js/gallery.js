@@ -83,11 +83,11 @@ const menuToggle = document.getElementById("menu-toggle");
                 //     });
                 // });
                 galleryItems.forEach((item, index) => {
-    item.setAttribute('data-index', index); // ensure correct index
-    item.addEventListener('click', () => {
-        showImage(index);
-    });
-});
+                    item.setAttribute('data-index', index); // ensure correct index
+                    item.addEventListener('click', () => {
+                        showImage(index);
+                    });
+                });
                 
                 const closeModal = () => {
                     document.querySelector('header').style.transform = "translateY(0)"
