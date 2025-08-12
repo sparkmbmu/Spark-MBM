@@ -489,8 +489,9 @@ body {
 }
 
 .arrow-container {
-  position: relative;
-  top: 50vh;
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-around;
 }
 
 .arrow {
@@ -507,17 +508,42 @@ body {
   transform: scale(1.2);
 }
 .left-arrow {
-  left: -1%;
+  left: 10%;
 }
 
 .right-arrow {
-  right: -1%;
+  right: 10%;
+}
+@media( max-width: 1230px){
+  .arrow{
+    top: 50%;
+  }
+  .left-arrow {
+  left: 4%;
+}
+
+.right-arrow {
+  right: 4%;
+}
+}
+@media( max-width: 500px){
+.arrow{
+    top: 25%;
+  }
+  .left-arrow {
+  left: 2%;
+}
+
+.right-arrow {
+  right: 2%;
+}
 }
 
 .winners-section {
   background: transparent;
   padding: 4rem 1rem;
   text-align: center;
+  position: relative;
 }
 
 .winners-section h2 {
