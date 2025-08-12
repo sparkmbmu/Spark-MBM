@@ -231,6 +231,10 @@ body {
   letter-spacing: 2px;
 }
 
+.hero-content h1 span{
+  color:white;
+}
+
 .hero-content p {
   max-width: 800px;
   margin: 0 auto;
@@ -624,5 +628,6 @@ html {
   scrollbar-color: #ff6a00 #0d1117;
   /* thumb track */
 }
+
 
 
