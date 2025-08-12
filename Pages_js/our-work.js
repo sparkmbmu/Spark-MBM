@@ -1,4 +1,3 @@
-
 // hamburger 
  const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -38,7 +37,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             // --- Initialize Feather Icons ---
             feather.replace();
 
@@ -46,31 +45,36 @@ document.addEventListener('DOMContentLoaded', () => {
             const winnersData = {
                 "Contest 2.0": {
                     "Beginner": [
-                        { name: "Suraj Chouhan", img: "../Components/Home/Results/Spark_Contest_2/surajcho.jpg" , Batch: "2024-2028"},
-                        { name: "Harshit Seth", img: "../Components/Home/Results/Spark_Contest_2/harshit.jpeg" , Batch: "2024-2028"},
-                        { name: "Sujal Gupta", img: "../Components/Home/Results/Spark_Contest_2/sujal.jpg" , Batch: "2024-2028"}
+                        { name: "Piyush Lamba", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Piyush" },
+                        { name: "Niyati Bhandari", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Niyati" },
+                        { name: "Priyanka Suthar", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Priyanka" }
                     ],
                     "Intermediate": [
-                        { name: "Priyank Mundel", img: "../Components/Home/Results/Spark_Contest_2/priyank.jpg" , Batch: "2024-2028"},
-                        { name: "Yogya Agarwal", img: "../Components/Home/Results/Spark_Contest_2/yogya.jpg" , Batch: "2024-2028"},
-                        { name: "Randeep Singh", img: "../Components/Home/Results/Spark_Contest_2/randeep.jpg" , Batch: "2024-2028"}
+                        { name: "Tanvi Shekhawat", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Tanvi" },
+                        { name: "Randeep Singh", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Randeep" },
+                        { name: "Yash Garg", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Yash" }
+                    ],
+                    "Hard": [
+                        { name: "Mohit Pohwani", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Mohit" },
+                        { name: "Garvit Jain", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Garvit" },
+                        { name: "Himanshi Mathur", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=Himanshi" }
                     ]
                 },
                 "Contest 1.0": {
                     "Beginner": [
-                        { name: "Piyush Lamba", img: "../Components/Home/Results/Spark_Contest_1/piyush.jpg" , Batch: "2024-2028"},
-                        { name: "Niyati Bhandari", img: "../Components/Home/Results/Spark_Contest_1/niyati.jpg" , Batch: "2024-2028"},
-                        { name: "Priyanka Suthar", img: "../Components/Home/Results/Spark_Contest_1/priyanka.jpg" , Batch: "2024-2028"}
+                        { name: "Student A", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=A" },
+                        { name: "Student B", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=B" },
+                        { name: "Student C", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=C" }
                     ],
                     "Intermediate": [
-                        { name: "Tanvi Shekhawat", img: "../Components/Home/Results/Spark_Contest_1/tanvish.jpg" , Batch: "2024-2028"},
-                        { name: "Randeep Singh", img: "../Components/Home/Results/Spark_Contest_1/randeep.jpg" , Batch: "2024-2028"},
-                        { name: "Yash Garg", img: "../Components/Home/Results/Spark_Contest_1/yash.jpg" , Batch: "2024-2028"}
+                        { name: "Student D", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=D" },
+                        { name: "Student E", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=E" },
+                        { name: "Student F", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=F" }
                     ],
                     "Hard": [
-                        { name: "Mohit Pohwani", img: "../Components/Home/Results/Spark_Contest_1/mohitpoh.jpg" , Batch: "2024-2028"},
-                        { name: "Garvit Jain", img: "../Components/Home/Results/Spark_Contest_1/garvit.png" , Batch: "2024-2028"},
-                        { name: "Himanshi Mathur", img: "../Components/Home/Results/Spark_Contest_1/himanshi.jpeg" , Batch: "2024-2028"}
+                        { name: "Student G", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=G" },
+                        { name: "Student H", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=H" },
+                        { name: "Student I", img: "https://placehold.co/250x250/1a1a1a/ffffff?text=I" }
                     ]
                 }
             };
@@ -85,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
             function openWinnerModal(event) {
                 const contest = event.currentTarget.dataset.contest;
                 const level = event.currentTarget.dataset.level;
-                   document.querySelector('header').classList.add('hidden');
                 const winners = winnersData[contest]?.[level];
 
                 if (!winners) {
@@ -105,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p class="h-upper position-badge">${badges[index]}</p>
                             <img src="${winner.img}" alt="Winner ${winner.name}" onerror="this.onerror=null;this.src='https://placehold.co/250x250/1a1a1a/ffffff?text=Image+Error';">
                             <p class="h-lower">${winner.name}</p>
-                            <p class="batch-label">${winner.Batch}</p>
                         </div>
                     `;
                     modalGallery.innerHTML += winnerCard;
@@ -118,8 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
             function closeWinnerModal() {
                 winnerModal.classList.remove('active');
                 document.body.classList.remove('modal-open');
-                 document.querySelector('header').classList.remove('hidden');
-                
             }
 
             viewWinnersBtns.forEach(btn => btn.addEventListener('click', openWinnerModal));
@@ -158,21 +158,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // --- View More Logic ---
-            const viewMoreContestsBtn = document.getElementById('view-more-contests');
-            const contestsHidden = document.getElementById('contests-hidden');
-            viewMoreContestsBtn.addEventListener('click', () => {
-                const isHidden = contestsHidden.style.display === 'none' || contestsHidden.style.display === '';
-                contestsHidden.style.display = isHidden ? 'block' : 'none';
-                viewMoreContestsBtn.textContent = isHidden ? 'View Less' : 'View More';
-            });
+            function setupViewMore(buttonId, contentId) {
+                const viewMoreBtn = document.getElementById(buttonId);
+                const hiddenContent = document.getElementById(contentId);
+                if (viewMoreBtn && hiddenContent) {
+                    viewMoreBtn.addEventListener('click', () => {
+                        const isHidden = hiddenContent.style.display === 'none' || hiddenContent.style.display === '';
+                        hiddenContent.style.display = isHidden ? 'block' : 'none';
+                        viewMoreBtn.textContent = isHidden ? 'View Less' : 'View More';
+                    });
+                }
+            }
 
-            const viewMoreSessionsBtn = document.getElementById('view-more-sessions');
-            const sessionsHidden = document.getElementById('sessions-hidden');
-            viewMoreSessionsBtn.addEventListener('click', () => {
-                const isHidden = sessionsHidden.style.display === 'none' || sessionsHidden.style.display === '';
-                sessionsHidden.style.display = isHidden ? 'block' : 'none';
-                viewMoreSessionsBtn.textContent = isHidden ? 'View Less' : 'View More';
-            });
+            setupViewMore('view-more-contests', 'contests-hidden');
+            setupViewMore('view-more-sessions', 'sessions-hidden');
+            setupViewMore('view-more-projects', 'projects-hidden');
 
 
             // --- Animated Canvas Background Logic ---
@@ -239,44 +239,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // --- Tab Navigation Logic (kept global for onclick) ---
-        function openTab(evt, tabName) {
-            const tabcontent = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            const tablinks = document.getElementsByClassName("tab-link");
-            for (let i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-        
-        // Set the default active tab on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('Contests').style.display = "block";
-        });
+function openTab(evt, tabName) {
+    // Hide all tab content
+    document.querySelectorAll(".tab-content").forEach(el => {
+        el.style.display = "none";
+    });
 
-let prevScroll = window.scrollY;
-const navbar = document.getElementById("navbar");
-const navbarHeight = navbar.offsetHeight;
+    // Remove active class from all tab buttons
+    document.querySelectorAll(".tab-link").forEach(btn => {
+        btn.classList.remove("active");
+    });
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.scrollY;
-
-  if (currentScroll <= navbarHeight) {
-    navbar.style.top = "0";
-  } else if (currentScroll > prevScroll) {
-    navbar.style.top = `-${navbarHeight}px`;
-  } else {
-    navbar.style.top = "0";
-  }
-
-  prevScroll = currentScroll;
-
-  if (window.scrollY > 10) {
-  navbar.classList.add("scrolled");
-} else {
-  navbar.classList.remove("scrolled");
+    // Show the clicked tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
 }
+
+// Show only Contests on page load
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll(".tab-content").forEach(el => {
+        el.style.display = "none";
+    });
+    document.getElementById("Contests").style.display = "block";
 });

@@ -381,117 +381,203 @@ header.hidden {
 }
 
 /* --- Universal Card Style --- */
-.card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* Mobile first: single column */
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+.section {
+            padding: 4rem 1rem;
+            position: relative;
+            z-index: 1;
+        }
 
-.event-card {
-    background: var(--color-card-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-    padding: 2rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    backdrop-filter: blur(5px);
-}
+        .section-title {
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
 
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--color-glow);
-}
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: var(--color-text-muted);
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            line-height: 1.7;
+        }
 
-.event-card .icon {
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-}
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-primary);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
 
-.event-card h3 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-text);
-}
+        /* --- Tabbed Interface --- */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--color-border);
+            flex-wrap: wrap;
+        }
 
-.event-card .level-tag {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    align-self: flex-start;
-}
+        .tab-link {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--color-text-muted);
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s;
+            flex-shrink: 0;
+        }
 
-.level-tag.beginner {
-    background-color: rgba(0, 191, 255, 0.2);
-    color: var(--color-secondary);
-}
+        .tab-link:hover {
+            color: var(--color-text);
+        }
 
-.level-tag.intermediate {
-    background-color: rgba(255, 106, 0, 0.2);
-    color: var(--color-primary);
-}
+        .tab-link.active {
+            color: var(--color-primary);
+        }
 
-.level-tag.hard {
-    background-color: rgba(255, 51, 51, 0.2);
-    color: #ff3333;
-}
+        .tab-link.active::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--color-primary);
+        }
 
-.event-card p {
-    color: var(--color-text-muted);
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-}
+        .tab-content {
+            display: none;
+            animation: fadeInContent 0.5s;
+        }
 
-.card-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: auto;
-}
+        @keyframes fadeInContent {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-.btn {
-    display: inline-block;
-    padding: 0.7rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    text-align: center;
-    cursor: pointer;
-}
+        .tab-content.active {
+            display: block;
+        }
 
-.btn-primary {
-    background: var(--color-primary);
-    color: #fff;
-    border: 2px solid var(--color-primary);
-}
+        /* --- Universal Card Style --- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile first: single column */
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.btn-primary:hover {
-    background: transparent;
-    color: var(--color-primary);
-}
+        .event-card, .project-card {
+            background: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(5px);
+        }
 
-.btn-secondary {
-    background: transparent;
-    color: var(--color-secondary);
-    border: 2px solid var(--color-secondary);
-}
+        .event-card:hover, .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--color-glow);
+        }
 
-.btn-secondary:hover {
-    background: var(--color-secondary);
-    color: var(--color-bg);
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
-}
+        .event-card .icon, .project-card .icon {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .event-card h3, .project-card h3 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .event-card .level-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            align-self: flex-start;
+        }
+.level-tag.beginner { background-color: rgba(0, 191, 255, 0.2); color: var(--color-secondary); }
+        .level-tag.intermediate { background-color: rgba(255, 106, 0, 0.2); color: var(--color-primary); }
+        .level-tag.hard { background-color: rgba(255, 51, 51, 0.2); color: #ff3333; }
+
+        .event-card p, .project-card p {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .card-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--color-primary);
+            color: #fff;
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--color-primary);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-secondary);
+            border: 2px solid var(--color-secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--color-secondary);
+            color: var(--color-bg);
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+        }
+
+        .btn-github {
+            background: #333;
+            color: #fff;
+            border: 2px solid #333;
+        }
+        .btn-github:hover {
+            background: transparent;
+            color: #fff;
+        }
 
 
 /* --- Upcoming Event Card Style --- */
@@ -568,11 +654,12 @@ header.hidden {
 .view-more-container {
     text-align: center;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .hidden-content {
     display: none;
-    margin-top: 4rem;
+    margin-top: 1.4rem;
 }
 
 /* --- Winners Modal --- */
