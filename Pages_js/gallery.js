@@ -76,12 +76,18 @@ const menuToggle = document.getElementById("menu-toggle");
                     document.querySelector('body').style.overflowY = "hidden"
                 }
                 
-                galleryItems.forEach(item => {
-                    item.addEventListener('click', () => {
-                        const index = parseInt(item.getAttribute('data-index'));
-                        showImage(index);
-                    });
-                });
+                // galleryItems.forEach(item => {
+                //     item.addEventListener('click', () => {
+                //         const index = parseInt(item.getAttribute('data-index'));
+                //         showImage(index);
+                //     });
+                // });
+                galleryItems.forEach((item, index) => {
+    item.setAttribute('data-index', index); // ensure correct index
+    item.addEventListener('click', () => {
+        showImage(index);
+    });
+});
                 
                 const closeModal = () => {
                     document.querySelector('header').style.transform = "translateY(0)"
@@ -91,12 +97,12 @@ const menuToggle = document.getElementById("menu-toggle");
 
 
                 const showNextImage = () => {
-                    currentIndex = (currentIndex + 1) % galleryData.length;
+                    currentIndex = (currentIndex +1) % galleryData.length;
                     showImage(currentIndex);
                 };
 
                 const showPrevImage = () => {
-                    currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+                    currentIndex = (currentIndex -1 + galleryData.length) % galleryData.length;
                     showImage(currentIndex);
                 };
 
