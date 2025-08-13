@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="/Components/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/Components/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         <a href="/Pages/Team.html" class="nav-link">Team</a>
         <a href="/Pages/gallery.html" class="nav-link">Gallery</a>
         <a href="/Pages/resources.html" class="nav-link">Resources</a>
-        <a href="/Pages/our-work.html" class="nav-link">Our Work</a>
+        <a href="/Pages/our-work.html" class="nav-link">Events</a>
         <!-- <a href="/Pages/contact.html" class="nav-link">Contact Us</a> -->
         <a href="/Pages/join.html" class="nav-link-join">Join Us</a>
       </nav>
@@ -43,7 +43,7 @@
         <a href="/Pages/Team.html" class="nav-link ">Team</a>
         <a href="/Pages/gallery.html" class="nav-link">Gallery</a>
         <a href="/Pages/resources.html" class="nav-link">Resources</a>
-        <a href="/Pages/our-work.html" class="nav-link">Our Work</a>
+        <a href="/Pages/our-work.html" class="nav-link">Events</a>
         <!-- <a href="/Pages/contact.html" class="nav-link">Contact Us</a> -->
         <a href="/Pages/join.html" class="nav-link-join">Join Us</a>
       </nav>
@@ -88,10 +88,15 @@
             </div>
           </div>
           <div class="buttons">
-            <a href="/Pages/Team.html">
+            <a href="/Pages/our-work.html">
               <button class="primary-btn">
-                <span>Our Team</span>
-                <i class="fa-solid fa-caret-right"></i>
+                <span>Our Work</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                </svg>
+                <!-- <i class="fa-solid fa-caret-right"></i> -->
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
                   <path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -117,7 +122,7 @@
       </p>
     </div>
   </section>
-  
+
   <section class="highlights-section">
     <div class="container">
       <h2>Club Highlights</h2>
@@ -148,8 +153,8 @@
     </div>
 
     <div class="container">
-       <h2>Our Latest Contest Winners</h2>
-       <!-- <h3 id="gallery-title" class="gallery-title">Level-Advanced</h3> -->
+      <h2>Our Latest Contest Winners</h2>
+      <!-- <h3 id="gallery-title" class="gallery-title">Level-Advanced</h3> -->
       <!--<div class="winners-gallery gallery-active" id="gallery-1">
         <div class="winner first">
           <p class="h-upper position-badge">🥇 1st Position</p>
@@ -167,24 +172,25 @@
           <p class="h-lower">Himanshi Mathur</p>
         </div>
       </div> -->
-    <!-- </div>  -->
-<h3 id="gallery-title" class="gallery-title">Level-Intermediate</h3>    <div class="winners-gallery" id="gallery-2">
-      <div class="winner first">
-        <p class="h-upper position-badge">🥇 1st Position</p>
-        <img src="/Components/Home/Results/Spark_Contest_2/priyank.jpg" alt="Second Winner 1">
-        <p class="h-lower">Priyank Mundel</p>
+      <!-- </div>  -->
+      <h3 id="gallery-title" class="gallery-title">Level-Intermediate</h3>
+      <div class="winners-gallery" id="gallery-2">
+        <div class="winner first">
+          <p class="h-upper position-badge">🥇 1st Position</p>
+          <img src="/Components/Home/Results/Spark_Contest_2/priyank.jpg" alt="Second Winner 1">
+          <p class="h-lower">Priyank Mundel</p>
+        </div>
+        <div class="winner second">
+          <p class="h-upper position-badge">🥈 2nd Position</p>
+          <img src="/Components/Home/Results/Spark_Contest_2/yogya.jpg" alt="Second Winner 2">
+          <p class="h-lower">Yogya Agarwal</p>
+        </div>
+        <div class="winner third">
+          <p class="h-upper position-badge">🥉 3rd Position</p>
+          <img src="/Components/Home/Results/Spark_Contest_2/randeep.jpg" alt="Second Winner 3">
+          <p class="h-lower">Randeep Singh</p>
+        </div>
       </div>
-      <div class="winner second">
-        <p class="h-upper position-badge">🥈 2nd Position</p>
-        <img src="/Components/Home/Results/Spark_Contest_2/yogya.jpg" alt="Second Winner 2">
-        <p class="h-lower">Yogya Agarwal</p>
-      </div>
-      <div class="winner third">
-        <p class="h-upper position-badge">🥉 3rd Position</p>
-        <img src="/Components/Home/Results/Spark_Contest_2/randeep.jpg" alt="Second Winner 3">
-        <p class="h-lower">Randeep Singh</p>
-      </div>
-    </div>
     </div>
     <!-- <h3 id="title-3" class="gallery-title">Beginner Winners</h3> -->
     <div class="winners-gallery" id="gallery-3">
@@ -205,37 +211,38 @@
       </div>
     </div>
     </div>
-     </div>
+    </div>
     <a class="champs-btn " href="Pages/our-work.html#Results">View all Champs></a>
   </section>
 
- <!-- Glimpses of SPARK Section -->
+  <!-- Glimpses of SPARK Section -->
   <section class="section">
-            <h2 class="section-title">Glimpses of SPARK</h2>
-            <p class="section-subtitle">A look into the moments that define our community—workshops, competitions, and collaborative sessions.</p>
-            <div class="slider-wrapper">
-                <div class="slider-container">
-                    <div class="slide"><img src="Components/Gallery/img6.jpg" alt="Workshop session"></div>
-                    <div class="slide"><img src="Components/Gallery/img9.jpg" alt="Team working on a project"></div>
-                    <div class="slide"><img src="Components/Gallery/img1.jpg" alt="Coding on a laptop"></div>
-                    <div class="slide"><img src="Components/Gallery/img8.jpg" alt="Presentation to a group"></div>
-                    <div class="slide"><img src="Components/Gallery/img10.jpg" alt="Members collaborating"></div>
-                </div>
-            </div>
+    <h2 class="section-title">Glimpses of SPARK</h2>
+    <p class="section-subtitle">A look into the moments that define our community—workshops, competitions, and
+      collaborative sessions.</p>
+    <div class="slider-wrapper">
+      <div class="slider-container">
+        <div class="slide"><img src="Components/Gallery/img6.jpg" alt="Workshop session"></div>
+        <div class="slide"><img src="Components/Gallery/img9.jpg" alt="Team working on a project"></div>
+        <div class="slide"><img src="Components/Gallery/img1.jpg" alt="Coding on a laptop"></div>
+        <div class="slide"><img src="Components/Gallery/img8.jpg" alt="Presentation to a group"></div>
+        <div class="slide"><img src="Components/Gallery/img10.jpg" alt="Members collaborating"></div>
+      </div>
+    </div>
 
-            <div id="lightbox-modal" class="lightbox-modal">
-            <div class="lightbox-container">
-                <span class="lightbox-close" id="lightbox-close">&times;</span>
-                <img class="lightbox-content" id="lightbox-image">
-                <div class="lightbox-caption" id="lightbox-caption"></div>
-                <span class="lightbox-nav" id="prev-btn"><i class="fas fa-chevron-left"></i></span>
-                <span class="lightbox-nav" id="next-btn"><i class="fas fa-chevron-right"></i></span>
-            </div>
-          </div>
+    <div id="lightbox-modal" class="lightbox-modal">
+      <div class="lightbox-container">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <span class="lightbox-nav" id="prev-btn"><i class="fas fa-chevron-left"></i></span>
+        <span class="lightbox-nav" id="next-btn"><i class="fas fa-chevron-right"></i></span>
+      </div>
+    </div>
 
-            <div class="gallery-link-container ">
-                 <a href="Pages/gallery.html" class="btn champs-btn">View Full Gallery</a>
-            </div>
+    <div class="gallery-link-container ">
+      <a href="Pages/gallery.html" class="btn champs-btn">View Full Gallery</a>
+    </div>
   </section>
 
   <section class="mentor-section">
@@ -255,11 +262,11 @@
   <section class="contact-section" id="contact">
     <div class="contact-box">
       <h2><span id="animated-text">Contact <span class="spark">SPARK</span> Community</span></h2>
-        <div class="lead-info">
-         <p class="lead-contact">
-            📧 <a href="mailto:sparkmbmu@gmail.com">sparkmbmu@gmail.com</a><br>
-         </p>
-        </div>
+      <div class="lead-info">
+        <p class="lead-contact">
+          📧 <a href="mailto:sparkmbmu@gmail.com">sparkmbmu@gmail.com</a><br>
+        </p>
+      </div>
 
       <p>We'd love to hear from you! Please fill out the form below.</p>
       <form id="contactForm">
@@ -269,10 +276,10 @@
         <button type="submit">Send Message</button>
       </form>
       <div id="thankYouMessage" class="thank-you-message" style="display: none;">
-  <h3>✅ Thanks for contacting us!</h3>
-  <p>We will reply to you soon.</p>
-  <button id="returnBtn">Return</button>
-</div>
+        <h3>✅ Thanks for contacting us!</h3>
+        <p>We will reply to you soon.</p>
+        <button id="returnBtn">Return</button>
+      </div>
 
     </div>
   </section>
@@ -280,20 +287,20 @@
   <!-- footer  -->
   <footer>
     <p>© 2025 SPARK. All rights reserved.</p>
-  <div class="connections">
-    <a href="mailto:sparkmbmu@gmail.com" target="_blank" aria-label="Mail">
-      <i class="fa-solid fa-envelope"></i>
-    </a>
-    <a href="https://chat.whatsapp.com/I4hdWvJQbX476zWaOPmDNr" target="_blank" aria-label="WhatsApp">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-    <a href="https://www.instagram.com/spark.mbm" target="_blank" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.linkedin.com/company/spark-mbmu/" target="_blank" aria-label="LinkedIn">
-      <i class="fab fa-linkedin"></i>
-    </a>
-  </div>
+    <div class="connections">
+      <a href="mailto:sparkmbmu@gmail.com" target="_blank" aria-label="Mail">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://chat.whatsapp.com/I4hdWvJQbX476zWaOPmDNr" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://www.instagram.com/spark.mbm" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/company/spark-mbmu/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
   </footer>
   <script src="/Pages_js/script.js"></script>
 </body>
