@@ -160,6 +160,63 @@ window.addEventListener("scroll", () => {
 }
 });
 
+// galler image open logic 
+// Get elements
+const slides = document.querySelectorAll(".slide img");
+const lightboxModal = document.getElementById("lightbox-modal");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const closeBtn = document.getElementById("lightbox-close");
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+
+let lightboxIndex = 0; // renamed from currentIndex
+
+// Open Lightbox
+function openLightbox(index) {
+  lightboxIndex = index;
+  lightboxImage.src = slides[index].src;
+  // lightboxCaption.textContent = slides[index].alt;
+  lightboxModal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+  document.querySelector('header').style.transform = "translateY(-75px)";
+}
+
+// Close Lightbox
+function closeLightbox() {
+  lightboxModal.style.display = "none";
+  document.querySelector('header').style.transform = "translateY(0px)";
+  document.body.style.overflowY = "";
+}
+
+// Show Previous Image
+function showPrev() {
+  lightboxIndex = (lightboxIndex - 1 + slides.length) % slides.length;
+  openLightbox(lightboxIndex);
+}
+
+// Show Next Image
+function showNext() {
+  lightboxIndex = (lightboxIndex + 1) % slides.length;
+  openLightbox(lightboxIndex);
+}
+
+// Event Listeners
+slides.forEach((slide, index) => {
+  slide.addEventListener("click", () => openLightbox(index));
+});
+
+closeBtn.addEventListener("click", closeLightbox);
+prevBtn.addEventListener("click", showPrev);
+nextBtn.addEventListener("click", showNext);
+
+// Optional: close lightbox when clicking outside image
+lightboxModal.addEventListener("click", (e) => {
+  if (e.target === lightboxModal) closeLightbox();
+});
+
+
+
 // contact form logic 
 
  const form = document.getElementById("contactForm");
