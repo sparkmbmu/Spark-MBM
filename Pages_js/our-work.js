@@ -42,7 +42,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
             feather.replace();
 
             // --- Winner Data ---
-            const winnersData = {
+const winnersData = {
                 "Contest 2.0": {
                     "Beginner": [
                         { name: "Suraj Chouhan", img: "../Components/Home/Results/Spark_Contest_2/surajcho.jpg" , Batch: "2024-2028"},
@@ -332,4 +332,12 @@ function updateTimelineProgress() {
 window.addEventListener("scroll", updateTimelineProgress);
 window.addEventListener("resize", updateTimelineProgress);
 updateTimelineProgress();
+document.addEventListener("DOMContentLoaded", function() {
+  const viewWinnersHard = document.getElementById("view-winners-hard");
+
+  viewWinnersHard.addEventListener("click", function() {
+    alert("To be announced soon!");
+  });
+});
+
 
