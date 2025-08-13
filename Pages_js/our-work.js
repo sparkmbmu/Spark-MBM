@@ -90,6 +90,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
                 const contest = event.currentTarget.dataset.contest;
                 const level = event.currentTarget.dataset.level;
                 const winners = winnersData[contest]?.[level];
+                document.querySelector('header').style.transform = "translateY(-72px)"
 
                 if (!winners) {
                     console.error("Winners not found for", contest, level);
@@ -119,6 +120,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
 
             function closeWinnerModal() {
                 winnerModal.classList.remove('active');
+            document.querySelector('header').style.transform = "translateY(0px)"
                 document.body.classList.remove('modal-open');
             }
 
