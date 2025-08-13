@@ -288,3 +288,48 @@ window.addEventListener("scroll", () => {
   navbar.classList.remove("scrolled");
 }
 });
+
+
+// timeline logic 
+
+
+const timeline = document.querySelector(".timeline-container");
+const fill = document.querySelector(".timeline-line-fill");
+const progressCircle = document.querySelector(".timeline-progress-circle");
+const items = document.querySelectorAll(".timeline-item");
+const dots = document.querySelectorAll(".timeline-dot");
+
+function updateTimelineProgress() {
+  const rect = timeline.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  const sectionCenter = rect.top + (timeline.offsetHeight / 2);
+  const viewportCenter = windowHeight / 2;
+
+  const startPoint = viewportCenter - sectionCenter;
+  let progress = (startPoint + (timeline.offsetHeight / 2)) / timeline.offsetHeight;
+  progress = Math.max(0, Math.min(1, progress));
+
+  const fillHeight = progress * timeline.offsetHeight;
+  fill.style.height = fillHeight + "px";
+
+  // Move the circle to the end of the fill
+  progressCircle.style.top = fillHeight - (progressCircle.offsetHeight / 2) + "px";
+
+  // Highlight items when fill passes their dot
+  items.forEach((item, index) => {
+    const dotRect = dots[index].getBoundingClientRect();
+    const dotOffset = dotRect.top - timeline.getBoundingClientRect().top;
+
+    if (dotOffset <= fillHeight) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", updateTimelineProgress);
+window.addEventListener("resize", updateTimelineProgress);
+updateTimelineProgress();
+
