@@ -1,0 +1,21 @@
+{
+  "name": "Spark Club App",
+  "short_name": "Spark Club",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#333",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "Components/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "Components/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

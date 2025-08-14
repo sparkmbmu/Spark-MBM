@@ -232,3 +232,4 @@ lightboxModal.addEventListener("click", (e) => {
   returnBtn.addEventListener("click", function() {
     window.location.reload(); 
   });
+
