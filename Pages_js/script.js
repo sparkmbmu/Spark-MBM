@@ -7,17 +7,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }
  const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
-  const hamburgerIcon = menuToggle.querySelector("svg:not(#close-icon)");
+  const hamburgerIcon = menuToggle?.querySelector("svg:not(#close-icon)");
   const closeIcon = document.getElementById("close-icon");
   const links = document.querySelectorAll("#mobile-menu .nav-link, #mobile-menu .nav-link-join");
 
-  function toggleMenu() {
-    const isOpen = mobileMenu.classList.toggle("active");
-    hamburgerIcon.style.display = isOpen ? "none" : "block";
-    closeIcon.style.display = isOpen ? "block" : "none";
+  if (!menuToggle || !mobileMenu) return; // Exit if no navbar exists
+
+  function toggleMenu(forceClose = false) {
+    const isOpen = forceClose ? false : !mobileMenu.classList.contains("active");
+
+    if (isOpen) {
+      mobileMenu.classList.add("active");
+      hamburgerIcon.style.display = "none";
+      closeIcon.style.display = "block";
+      document.body.style.overflow = "hidden"; 
+    } else {
+      mobileMenu.classList.remove("active");
+      hamburgerIcon.style.display = "block";
+      closeIcon.style.display = "none";
+      document.body.style.overflow = ""; 
+    }
   }
 
-  menuToggle.addEventListener("click", toggleMenu);
+  // Toggle on hamburger click
+  menuToggle.addEventListener("click", () => toggleMenu());
+
+  // Close on link click
+  links.forEach(link =>
+    link.addEventListener("click", () => toggleMenu(true))
+  );
+
+  // Close on outside click
+  document.addEventListener("click", (e) => {
+    if (
+      mobileMenu.classList.contains("active") &&
+      !mobileMenu.contains(e.target) &&
+      !menuToggle.contains(e.target)
+    ) {
+      toggleMenu(true);
+    }
+  });
 
   links.forEach(link => {
     link.addEventListener("click", () => {

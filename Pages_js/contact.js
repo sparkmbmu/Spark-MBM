@@ -96,6 +96,8 @@
 
 // This event listener ensures that the script runs only after the entire
 // HTML document has been loaded and parsed.
+
+
 document.addEventListener("DOMContentLoaded", function() {
 
   // --- Mobile Menu Logic ---

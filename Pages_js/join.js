@@ -1,36 +1,45 @@
-// // ✅ Toggle mobile menu
-// const toggle = document.getElementById('menu-toggle');
-// const mobileMenu = document.getElementById('mobile-menu');
-
-// toggle.addEventListener('click', () => {
-//   mobileMenu.classList.toggle('hidden');
-// });
-
-// // ✅ Fancy text effect (example)
-// document.addEventListener('DOMContentLoaded', () => {
-//   const text = document.querySelector('.animated-text');
-//   text.style.opacity = '0';
-//   text.style.transform = 'translateY(20px)';
-//   setTimeout(() => {
-//     text.style.transition = 'opacity 1s ease, transform 1s ease';
-//     text.style.opacity = '1';
-//     text.style.transform = 'translateY(0)';
-//   }, 1000);
-// });
-
 const menuToggle = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const hamburgerIcon = menuToggle.querySelector("svg:not(#close-icon)");
-  const closeIcon = document.getElementById("close-icon");
-  const links = document.querySelectorAll("#mobile-menu .nav-link, #mobile-menu .nav-link-join");
+const mobileMenu = document.getElementById("mobile-menu");
+const hamburgerIcon = menuToggle.querySelector("svg:not(#close-icon)");
+const closeIcon = document.getElementById("close-icon");
+const links = document.querySelectorAll("#mobile-menu .nav-link, #mobile-menu .nav-link-join");
 
-  function toggleMenu() {
-    const isOpen = mobileMenu.classList.toggle("active");
-    hamburgerIcon.style.display = isOpen ? "none" : "block";
-    closeIcon.style.display = isOpen ? "block" : "none";
+function openMenu() {
+  mobileMenu.classList.add("active");
+  hamburgerIcon.style.display = "none";
+  closeIcon.style.display = "block";
+  document.body.style.overflow = "hidden"; // lock scroll
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove("active");
+  hamburgerIcon.style.display = "block";
+  closeIcon.style.display = "none";
+  document.body.style.overflow = ""; // unlock scroll
+}
+
+menuToggle.addEventListener("click", () => {
+  if (mobileMenu.classList.contains("active")) {
+    closeMenu();
+  } else {
+    openMenu();
   }
+});
 
-  menuToggle.addEventListener("click", toggleMenu);
+// Close when clicking a link
+links.forEach(link =>
+  link.addEventListener("click", closeMenu)
+);
+
+// Close when clicking outside menu
+document.addEventListener("click", (e) => {
+  const isClickInsideMenu = mobileMenu.contains(e.target);
+  const isClickOnToggle = menuToggle.contains(e.target);
+
+  if (!isClickInsideMenu && !isClickOnToggle && mobileMenu.classList.contains("active")) {
+    closeMenu();
+  }
+});
 
   links.forEach(link => {
     link.addEventListener("click", () => {
