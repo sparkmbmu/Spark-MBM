@@ -99,7 +99,7 @@ const winnersData = {
                         { name: "Randeep Singh", img: "../Components/Home/Results/Spark_Contest_1/randeep.jpg" , Batch: "2024-2028"},
                         { name: "Yash Garg", img: "../Components/Home/Results/Spark_Contest_1/yash.jpg" , Batch: "2024-2028"}
                     ],
-                    "Hard": [
+                    "Advanced": [
                         { name: "Mohit Pohwani", img: "../Components/Home/Results/Spark_Contest_1/mohitpoh.jpg" , Batch: "2024-2028"},
                         { name: "Garvit Jain", img: "../Components/Home/Results/Spark_Contest_1/garvit.png" , Batch: "2024-2028"},
                         { name: "Himanshi Mathur", img: "../Components/Home/Results/Spark_Contest_1/himanshi.jpeg" , Batch: "2024-2028"}
