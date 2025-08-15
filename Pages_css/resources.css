@@ -7,7 +7,7 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background-color: rgba(0, 0, 0, 0.93);
+  background-color: rgba(0, 0, 0, 0.95);
   color: white;
   min-height: 100vh;
   line-height: 1.6;
@@ -627,6 +627,7 @@ html {
   scrollbar-color: #ff6a00 #0d1117;
   /* thumb track */
 }
+
 
 
 
