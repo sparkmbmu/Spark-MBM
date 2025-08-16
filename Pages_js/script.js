@@ -73,7 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
       bar.style.opacity = 1;
     }, 500);
   }
-  const words = ["ANALYZE", "CODE", "CONQUER"];
+  // const words = ["ANALYZE", "CODE", "CONQUER"];
+  const words = ["AUTOMATE", "OPTIMIZE", "DEPLOY"];
+
   let currentWordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
