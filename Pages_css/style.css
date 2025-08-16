@@ -1,5 +1,5 @@
 body {
-   margin: 0;
+  margin: 0;
   font-family: "Segoe UI", sans-serif;
   background-image: url("/Components/Home/newbg.jpg");
   background-color: black;
@@ -8,7 +8,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: cover; /* This ensures no gaps */
+  background-size: cover;
+  /* This ensures no gaps */
 
   max-width: 100%;
   overflow-x: hidden;
@@ -550,6 +551,7 @@ body {
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid #333;
+  -webkit-tap-highlight-color: transparent;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
