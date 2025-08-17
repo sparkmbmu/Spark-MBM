@@ -807,7 +807,7 @@ body {
 
 .mentor-section {
   background: transparent;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -1038,7 +1038,7 @@ footer .connections a:hover {
 
 .gallery-link-container {
   text-align: center;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 }
 
 /* lightbox styling  */
@@ -1218,7 +1218,7 @@ html {
   justify-content: center;
   align-items: center;
   padding: 4rem 1rem;
-  padding-top: 4rem;
+  /* padding-top: 1rem; */
 }
 
 .lead-contact a {
