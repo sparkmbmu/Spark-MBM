@@ -1090,8 +1090,9 @@ header.hidden {
 
 .timeline-dot {
     position: absolute;
-    left: 11px;
-    transform: translateX(-50%);
+    left: 10px;
+    top: 5px;
+    /* transform: translateX(-50%); */
     width: 18px;
     height: 18px;
     background-color: var(--color-bg);
@@ -1297,9 +1298,9 @@ header.hidden {
 
     .timeline-dot {
         left: 20px;
-        top: 0;
+        top: 5px;
         /* Align with the top of the item */
-        transform: translateX(-50%);
+        /* transform: translateX(-50%); */
         bottom: auto;
     }
 
