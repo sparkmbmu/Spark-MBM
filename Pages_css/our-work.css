@@ -619,6 +619,7 @@ header.hidden {
     backdrop-filter: blur(5px);
     text-align: center;
     justify-content: center;
+    min-height: 16rem;  /* added to set min height */
 }
 
 .upcoming-card:hover {
