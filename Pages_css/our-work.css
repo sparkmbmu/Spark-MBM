@@ -1362,7 +1362,32 @@ footer .connections a {
 footer .connections a:hover {
     color: yellow;
 }
+.footer-people {
+  margin-top: 10px;
+  text-align: center;
+}
 
+.footer-people .developers {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 8px 20px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.footer-people a {
+  text-decoration: none;
+  color: inherit;
+}
+.developers :hover{
+    color: yellow;
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .footer-people .developers {
+    grid-template-columns: repeat(2, auto);
+  }
+}
 
 
 
