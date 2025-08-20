@@ -496,6 +496,8 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   text-align: center;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 footer p {
@@ -519,37 +521,75 @@ footer .connections {
 }
 
 footer .connections a {
-  color: white;
-  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-size: 22px;
 }
 
 footer .connections a:hover {
   color: yellow;
 }
+
 .footer-people {
   margin-top: 10px;
   text-align: center;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-people .developers {
+  color: rgba(255, 255, 255, 0.7);
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 8px 20px;
+  grid-template-columns: repeat(7, auto);
+  gap: 5px 5px;
+  margin-bottom: 0.5rem;
   justify-content: center;
   margin-top: 5px;
 }
 
+.developedby{
+  font-size: 1.07rem;
+}
 .footer-people a {
   text-decoration: none;
   color: inherit;
+  display: inline-flex;
+  align-items: center;
 }
 .developers :hover{
-    color: yellow;
-    text-decoration: underline;
+    color: rgb(255, 255, 0, 1);
 }
-@media (max-width: 768px) {
+.rights{
+  font-size: smaller;
+  margin-bottom: 0.75rem;
+}
+.footer-people .developers a::after {
+  content: "·";
+  margin: 0 8px;
+  opacity: 0.6;
+  display: inline-block;
+  vertical-align: middle; /* ensures alignment */
+  font-size: 1.1em;       /* adjust size if needed */
+  line-height: 1;
+}
+
+.footer-people .developers a:last-child::after {
+  content: ""; /* No separator after last name */
+}
+@media (max-width: 600px) {
+  .footer-people .developers a::after {
+  content: " ·";
+  margin: 0 6px;
+  opacity: 0.6;
+}
+.footer-people .developers a:nth-child(2)::after {
+  content: ""; /* removes separator after 2nd child */
+}
+.footer-people .developers a:last-child::after {
+  content: ""; /* No separator after last name */
+}
   .footer-people .developers {
-    grid-template-columns: repeat(2, auto);
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* stack vertically */
+    gap: 6px;
   }
 }
 
