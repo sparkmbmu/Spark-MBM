@@ -619,7 +619,8 @@ header.hidden {
     backdrop-filter: blur(5px);
     text-align: center;
     justify-content: center;
-    min-height: 16rem;  /* added to set min height */
+    min-height: 16rem;
+    /* added to set min height */
 }
 
 .upcoming-card:hover {
@@ -1327,104 +1328,119 @@ header.hidden {
 
 /* footr  */
 footer {
-  background: rgba(0, 0, 0, 0.8);
-  text-align: center;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 footer p {
-  margin: 0.6rem 0;
+    margin: 0.6rem 0;
 }
 
 .footer-link {
-  color: cyan;
-  text-decoration: none;
-  margin: 0 0.5rem;
+    color: cyan;
+    text-decoration: none;
+    margin: 0 0.5rem;
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 footer .connections {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 footer .connections a {
-  color: rgb(255, 255, 255);
-  font-size: 22px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
 }
 
 footer .connections a:hover {
-  color: yellow;
+    color: yellow;
 }
 
 .footer-people {
-  margin-top: 10px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-people .developers {
-  color: rgba(255, 255, 255, 0.7);
-  display: grid;
-  grid-template-columns: repeat(7, auto);
-  gap: 5px 5px;
-  margin-bottom: 0.5rem;
-  justify-content: center;
-  margin-top: 5px;
+    color: rgba(255, 255, 255, 0.7);
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    gap: 5px 5px;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 0.95rem;
 }
 
-.developedby{
-  font-size: 1.07rem;
+.developedby {
+    font-size: 1rem;
 }
+
 .footer-people a {
-  text-decoration: none;
-  color: inherit;
-  display: inline-flex;
-  align-items: center;
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
 }
-.developers :hover{
+
+.developers :hover {
     color: rgb(255, 255, 0, 1);
 }
-.rights{
-  font-size: smaller;
-  margin-bottom: 0.75rem;
+
+.rights {
+    font-size: smaller;
+    margin-bottom: 0.75rem;
 }
+
 .footer-people .developers a::after {
-  content: "·";
-  margin: 0 8px;
-  opacity: 0.6;
-  display: inline-block;
-  vertical-align: middle; /* ensures alignment */
-  font-size: 1.1em;       /* adjust size if needed */
-  line-height: 1;
+    content: "·";
+    margin: 0 8px;
+    opacity: 0.6;
+    display: inline-block;
+    vertical-align: middle;
+    /* ensures alignment */
+    font-size: 1.1em;
+    /* adjust size if needed */
+    line-height: 1;
 }
 
 .footer-people .developers a:last-child::after {
-  content: ""; /* No separator after last name */
+    content: "";
+    /* No separator after last name */
 }
+
 @media (max-width: 600px) {
-  .footer-people .developers a::after {
-  content: " ·";
-  margin: 0 6px;
-  opacity: 0.6;
-}
-.footer-people .developers a:nth-child(2)::after {
-  content: ""; /* removes separator after 2nd child */
-}
-.footer-people .developers a:last-child::after {
-  content: ""; /* No separator after last name */
-}
-  .footer-people .developers {
-    display: grid;
-    grid-template-columns: repeat(2, auto); /* stack vertically */
-    gap: 6px;
-  }
+    .footer-people .developers a::after {
+        content: " ·";
+        margin: 0 6px;
+        opacity: 0.6;
+    }
+
+    .footer-people .developers a:nth-child(2)::after {
+        content: "";
+        /* removes separator after 2nd child */
+    }
+
+    .footer-people .developers a:last-child::after {
+        content: "";
+        /* No separator after last name */
+    }
+
+    .footer-people .developers {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        /* stack vertically */
+        gap: 6px;
+    }
 }
 
 

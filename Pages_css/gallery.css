@@ -168,7 +168,7 @@ main {
     gap: 1rem;
     z-index: 999;
   }
-  
+
   .nav-links.active {
     display: flex;
   }
@@ -255,8 +255,8 @@ main {
   margin-bottom: 1rem;
 }
 
-.gallery-header h1 span{
-  color:white;
+.gallery-header h1 span {
+  color: white;
 }
 
 .gallery-header p {
@@ -294,7 +294,7 @@ main {
 
 /* New class to hide gallery items for the "View More" feature */
 .gallery-item.is-hidden {
-    display: none;
+  display: none;
 }
 
 .gallery-item.is-visible {
@@ -441,7 +441,7 @@ main {
   }
 }
 
- .button-group {
+.button-group {
   display: flex;
   justify-content: center;
   margin-top: var(--space-xl);
@@ -469,7 +469,7 @@ main {
   color: black;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
 }
- 
+
 
 .lightbox-caption {
   font-family: 'Cormorant Garamond', serif;
@@ -554,7 +554,7 @@ footer .connections {
 
 footer .connections a {
   color: rgb(255, 255, 255);
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 
 footer .connections a:hover {
@@ -575,52 +575,67 @@ footer .connections a:hover {
   margin-bottom: 0.5rem;
   justify-content: center;
   margin-top: 5px;
+  font-size: 0.95rem;
 }
 
-.developedby{
-  font-size: 1.07rem;
+.developedby {
+  font-size: 1rem;
 }
+
 .footer-people a {
   text-decoration: none;
   color: inherit;
   display: inline-flex;
   align-items: center;
 }
-.developers :hover{
-    color: rgb(255, 255, 0, 1);
+
+.developers :hover {
+  color: rgb(255, 255, 0, 1);
 }
-.rights{
+
+.rights {
   font-size: smaller;
   margin-bottom: 0.75rem;
 }
+
 .footer-people .developers a::after {
   content: "·";
   margin: 0 8px;
   opacity: 0.6;
   display: inline-block;
-  vertical-align: middle; /* ensures alignment */
-  font-size: 1.1em;       /* adjust size if needed */
+  vertical-align: middle;
+  /* ensures alignment */
+  font-size: 1.1em;
+  /* adjust size if needed */
   line-height: 1;
 }
 
 .footer-people .developers a:last-child::after {
-  content: ""; /* No separator after last name */
+  content: "";
+  /* No separator after last name */
 }
+
 @media (max-width: 600px) {
   .footer-people .developers a::after {
-  content: " ·";
-  margin: 0 6px;
-  opacity: 0.6;
-}
-.footer-people .developers a:nth-child(2)::after {
-  content: ""; /* removes separator after 2nd child */
-}
-.footer-people .developers a:last-child::after {
-  content: ""; /* No separator after last name */
-}
+    content: " ·";
+    margin: 0 6px;
+    opacity: 0.6;
+  }
+
+  .footer-people .developers a:nth-child(2)::after {
+    content: "";
+    /* removes separator after 2nd child */
+  }
+
+  .footer-people .developers a:last-child::after {
+    content: "";
+    /* No separator after last name */
+  }
+
   .footer-people .developers {
     display: grid;
-    grid-template-columns: repeat(2, auto); /* stack vertically */
+    grid-template-columns: repeat(2, auto);
+    /* stack vertically */
     gap: 6px;
   }
 }
@@ -725,4 +740,3 @@ html {
   /* thumb track */
 
 }
-

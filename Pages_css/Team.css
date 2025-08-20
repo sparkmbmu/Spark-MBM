@@ -1,6 +1,7 @@
-*{
+* {
   -webkit-tap-highlight-color: transparent;
 }
+
 body {
   margin: 0px;
   background-color: black;
@@ -27,6 +28,7 @@ body::before {
   background-repeat: no-repeat;
   z-index: -1;
 }
+
 .navbar {
   background-color: #111;
   opacity: 0.95;
@@ -36,20 +38,22 @@ body::before {
   align-items: center;
   width: 100%;
   left: 0;
-  top: 0;  
-  right: 0;     
-  box-sizing: border-box; 
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
   /* overflow-x: hidden;   */
   z-index: 10000;
   position: fixed;
   transition: top 0.3s ease-in-out;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
+
 .logo {
   display: flex;
   gap: 5px;
@@ -63,15 +67,18 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .logoImg {
   width: 50px;
   height: auto;
   margin-right: 10px;
 }
+
 .nav-links {
   display: flex;
   gap: 1.5rem;
 }
+
 .nav-link-join {
   color: white;
   border-radius: 6px;
@@ -82,12 +89,14 @@ body::before {
   padding: 0.5rem 1rem;
   transition: all 0.3s ease-in-out;
 }
+
 .nav-link-join:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(255, 106, 0, 0.5);
   background: #ffd700;
   color: #111827;
 }
+
 .nav-link {
   color: white;
   text-decoration: none;
@@ -95,10 +104,12 @@ body::before {
   position: relative;
   padding: 0.5rem;
 }
+
 .nav-link.active,
 .nav-link:hover {
   color: cyan;
 }
+
 .nav-link::after {
   content: "";
   position: absolute;
@@ -109,18 +120,22 @@ body::before {
   background-color: white;
   transition: width 0.3s ease;
 }
+
 .nav-link:hover::after {
   width: 100%;
 }
+
 .hamburger {
   display: none;
   cursor: pointer;
 }
+
 .menu-icon {
   height: 24px;
   width: 24px;
   stroke: white;
 }
+
 .nav-links.mobile {
   display: none;
   flex-direction: column;
@@ -133,6 +148,7 @@ body::before {
   right: 0;
   z-index: 999;
 }
+
 @media (max-width: 800px) {
   .nav-links {
     display: none;
@@ -151,6 +167,7 @@ body::before {
     display: flex;
     color: cyan;
   }
+
   .desktop {
     display: none;
   }
@@ -158,11 +175,12 @@ body::before {
   .hamburger {
     display: block;
   }
+
   .close-icon {
     display: none;
   }
 
-  .logo{
+  .logo {
     font-size: 1.8rem;
   }
 }
@@ -192,6 +210,7 @@ section {
 .edit-spark {
   color: rgb(255, 102, 0);
 }
+
 .meet-us {
   padding-top: 8rem;
   font-size: 3rem;
@@ -227,7 +246,7 @@ section {
     font-size: 1.25rem;
     padding: 0 1rem;
   }
- 
+
 }
 
 .member-card {
@@ -437,7 +456,7 @@ footer .connections {
 
 footer .connections a {
   color: rgb(255, 255, 255);
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 
 footer .connections a:hover {
@@ -458,52 +477,67 @@ footer .connections a:hover {
   margin-bottom: 0.5rem;
   justify-content: center;
   margin-top: 5px;
+  font-size: 0.95rem;
 }
 
-.developedby{
-  font-size: 1.07rem;
+.developedby {
+  font-size: 1rem;
 }
+
 .footer-people a {
   text-decoration: none;
   color: inherit;
   display: inline-flex;
   align-items: center;
 }
-.developers :hover{
-    color: rgb(255, 255, 0, 1);
+
+.developers :hover {
+  color: rgb(255, 255, 0, 1);
 }
-.rights{
+
+.rights {
   font-size: smaller;
   margin-bottom: 0.75rem;
 }
+
 .footer-people .developers a::after {
   content: "·";
   margin: 0 8px;
   opacity: 0.6;
   display: inline-block;
-  vertical-align: middle; /* ensures alignment */
-  font-size: 1.1em;       /* adjust size if needed */
+  vertical-align: middle;
+  /* ensures alignment */
+  font-size: 1.1em;
+  /* adjust size if needed */
   line-height: 1;
 }
 
 .footer-people .developers a:last-child::after {
-  content: ""; /* No separator after last name */
+  content: "";
+  /* No separator after last name */
 }
+
 @media (max-width: 600px) {
   .footer-people .developers a::after {
-  content: " ·";
-  margin: 0 6px;
-  opacity: 0.6;
-}
-.footer-people .developers a:nth-child(2)::after {
-  content: ""; /* removes separator after 2nd child */
-}
-.footer-people .developers a:last-child::after {
-  content: ""; /* No separator after last name */
-}
+    content: " ·";
+    margin: 0 6px;
+    opacity: 0.6;
+  }
+
+  .footer-people .developers a:nth-child(2)::after {
+    content: "";
+    /* removes separator after 2nd child */
+  }
+
+  .footer-people .developers a:last-child::after {
+    content: "";
+    /* No separator after last name */
+  }
+
   .footer-people .developers {
     display: grid;
-    grid-template-columns: repeat(2, auto); /* stack vertically */
+    grid-template-columns: repeat(2, auto);
+    /* stack vertically */
     gap: 6px;
   }
 }
@@ -519,12 +553,10 @@ footer .connections a:hover {
 
 .shiny-text {
   color: #b5b5b5a4;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(255, 243, 175, 0.8) 50%,
-    rgba(255, 255, 255, 0) 60%
-  );
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 243, 175, 0.8) 50%,
+      rgba(255, 255, 255, 0) 60%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -536,6 +568,7 @@ footer .connections a:hover {
   0% {
     background-position: 100%;
   }
+
   100% {
     background-position: -100%;
   }
@@ -549,58 +582,71 @@ footer .connections a:hover {
 
 /* ===== Chrome, Edge, Safari ===== */
 ::-webkit-scrollbar {
-  width: 14px;  /* Wider for more realistic look */
+  width: 14px;
+  /* Wider for more realistic look */
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0d1117;       /* Dark background */
-  border-left: 1px solid #1a1f27; /* Slight inner border */
+  background: #0d1117;
+  /* Dark background */
+  border-left: 1px solid #1a1f27;
+  /* Slight inner border */
 }
 
 /* Thumb */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ff6a00, #cc5500); /* Gradient orange */
+  background: linear-gradient(180deg, #ff6a00, #cc5500);
+  /* Gradient orange */
   border-radius: 6px;
-  border: 2px solid #0d1117;  /* Creates gap between track & thumb */
+  border: 2px solid #0d1117;
+  /* Creates gap between track & thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ff7f26, #e65c00); /* Brighter on hover */
+  background: linear-gradient(180deg, #ff7f26, #e65c00);
+  /* Brighter on hover */
 }
 
 /* ===== Scrollbar Buttons (Arrows) ===== */
 
 /* Common button base */
 ::-webkit-scrollbar-button {
-  background-color: #0d1117;  /* Matches track */
+  background-color: #0d1117;
+  /* Matches track */
   border: none;
-  height: 16px; /* Controls button height */
+  height: 16px;
+  /* Controls button height */
 }
 
 /* Up arrow */
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-bottom: 6px solid #ff6a00; /* Arrow color */
+  border-bottom: 6px solid #ff6a00;
+  /* Arrow color */
 }
 
 /* Down arrow */
 ::-webkit-scrollbar-button:single-button:vertical:increment {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 6px solid #ff6a00; /* Arrow color */
+  border-top: 6px solid #ff6a00;
+  /* Arrow color */
 }
 
 /* Hover effect on arrows */
 ::-webkit-scrollbar-button:single-button:vertical:decrement:hover,
 ::-webkit-scrollbar-button:single-button:vertical:increment:hover {
-  border-bottom-color: #ff7f26; /* Up arrow hover */
-  border-top-color: #ff7f26;    /* Down arrow hover */
+  border-bottom-color: #ff7f26;
+  /* Up arrow hover */
+  border-top-color: #ff7f26;
+  /* Down arrow hover */
 }
 
 /* ===== Firefox ===== */
 html {
   scrollbar-width: thin;
-  scrollbar-color: #ff6a00 #0d1117; /* thumb track */
+  scrollbar-color: #ff6a00 #0d1117;
+  /* thumb track */
 }
