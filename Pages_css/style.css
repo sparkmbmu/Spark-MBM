@@ -62,17 +62,18 @@ body {
 .logoImg {
   width: 150px;       
   height: auto;        
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 5px;
   object-fit: contain; 
   
   /* Styling effects */
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)); /* glowing shadow */
+  filter: drop-shadow(0 0 8px rgba(255, 162, 99, 0.6)); /* glowing shadow */
   transition: transform 0.3s ease, filter 0.3s ease;     /* smooth hover */
 }
 
 .logoImg:hover {
   transform: scale(1.01);  /* zoom effect */
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 0 12px rgba(255, 162, 99, 0.8));
 }
 
 .nav-links {
