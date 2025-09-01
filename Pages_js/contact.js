@@ -176,11 +176,27 @@ document.addEventListener("DOMContentLoaded", function() {
   const thankYouMessage = document.getElementById("thankYouMessage");
   const returnBtn = document.getElementById("returnBtn");
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault(); // Prevent the form from submitting traditionally
-    form.style.display = "none";
-    thankYouMessage.style.display = "block";
-  });
+ form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    subject: form.subject.value,
+    message: form.message.value
+  };
+
+  emailjs.send("service_5qx2qma", "template_jj4c5jz", formData)
+    .then(function(response) {
+      console.log("SUCCESS!", response.status, response.text);
+      form.style.display = "none";
+      thankYouMessage.style.display = "block";
+    }, function(error) {
+      console.error("FAILED...", error);
+      alert("❌ Message could not be sent. Please try again.");
+    });
+});
+
 
   returnBtn.addEventListener("click", function() {
     window.location.reload(); // Reload the page to show the form again
