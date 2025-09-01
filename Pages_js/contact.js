@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function() {
     message: form.message.value
   };
 
-  emailjs.send("service_5qx2qma", "template_jj4c5jz", formData)
+  emailjs.send("service_rre1amq", "template_jj4c5jz", formData)
     .then(function(response) {
       console.log("SUCCESS!", response.status, response.text);
       form.style.display = "none";
