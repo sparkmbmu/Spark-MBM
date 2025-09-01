@@ -183,7 +183,9 @@ document.addEventListener("DOMContentLoaded", function() {
     name: form.name.value,
     email: form.email.value,
     subject: form.subject.value,
-    message: form.message.value
+    message: form.message.value,
+    date: new Date().toLocaleDateString(),
+    time: new Date().toLocaleTimeString() 
   };
 
   emailjs.send("service_9jbjvfb", "template_jj4c5jz", formData)
