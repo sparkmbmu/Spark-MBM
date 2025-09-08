@@ -250,17 +250,32 @@ lightboxModal.addEventListener("click", (e) => {
 
 // contact form logic 
 
- const form = document.getElementById("contactForm");
+  (function() {
+    emailjs.init("EFTfcs8ZCp25IMzRP"); // Your Public Key
+  })();
+
+  const form = document.getElementById("contactForm");
   const thankYouMessage = document.getElementById("thankYouMessage");
   const returnBtn = document.getElementById("returnBtn");
 
   form.addEventListener("submit", function(e) {
-    e.preventDefault(); 
-    form.style.display = "none";
-    thankYouMessage.style.display = "block";
+    e.preventDefault();
+
+    // Use your new Service ID + Template ID
+    emailjs.sendForm("service_pezo3z2", "template_5bqu45o", this)
+      .then(() => {
+        form.style.display = "none";
+        thankYouMessage.style.display = "block";
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("❌ EmailJS Error:", error);
+        alert("Failed to send message. Check console for details.");
+      });
   });
 
   returnBtn.addEventListener("click", function() {
-    window.location.reload(); 
+    thankYouMessage.style.display = "none";
+    form.style.display = "block";
   });
 
