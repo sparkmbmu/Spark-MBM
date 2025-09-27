@@ -266,6 +266,28 @@ const winnersData = {
 
             initParticles();
             animateParticles();
+
+          // countdown for project
+          const targetDate = new Date("October 1, 2025 00:00:00").getTime();
+          const countdownElement = document.getElementById("countdown");  
+          const interval = setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            if (timeLeft <= 0) {
+            clearInterval(interval);
+            countdownElement.textContent = "Launched!";
+            countdownElement.classList.add("ended");
+            return;
+          }
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+            
         });
 
         // --- Tab Navigation Logic (kept global for onclick) ---
@@ -367,5 +389,6 @@ document.addEventListener("DOMContentLoaded", function() {
     alert("To be announced soon!");
   });
 });
+
 
 
