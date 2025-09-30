@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# If you ever want to block any folder or page, add:
+# Disallow: /private/
+
+Sitemap: https://sparkmbmu.netlify.app/sitemap.xml
